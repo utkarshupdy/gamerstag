@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function AboutUsPage() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const slidesRef = useRef(null);
+//   const slidesRef = useRef(null);
   
   // Sample achievements data
  const achievements = [
@@ -146,7 +146,7 @@ const [specialFeatures] = useState([
       <section className="bg-black py-6 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl font-light font-sans italic text-gray-300 mb-6">
-            "The future of gaming is not just about playing games, it's about building communities, creating opportunities, and establishing connections that transcend traditional boundaries. At GAMERS TAG, we're building that future today."
+          &quot;The future of gaming is not just about playing games, it&apos;s about building communities, creating opportunities, and establishing connections that transcend traditional boundaries. At GAMERS TAG, we&apos;re building that future today.&quot;
           </blockquote>
           <div className="flex justify-end">
             <cite className="text-right text-xl text-slate-300 font-bold">
@@ -232,13 +232,13 @@ const [specialFeatures] = useState([
             <h2 className="text-3xl font-sans font-normal mb-6">Our Mission</h2>
           </div>
           <p className="text-gray-300 font-sans leading-relaxed max-w-4xl">
-          At GAMERS TAG, our mission goes far beyond creating a platform — we aim to revolutionize the way the gaming world connects, grows, and thrives. We are building the world’s most comprehensive and inclusive gaming ecosystem, one that unites gamers of all levels, connects innovative brands, and propels the dynamic growth of esports and interactive entertainment.
+          At GAMERS TAG, our mission goes far beyond creating a platform — we aim to revolutionize the way the gaming world connects, grows, and thrives. We are building the world&apos;s most comprehensive and inclusive gaming ecosystem, one that unites gamers of all levels, connects innovative brands, and propels the dynamic growth of esports and interactive entertainment.
 
-We envision a global community where barriers are eliminated and opportunities are accessible to all — whether you're a casual player finding your tribe, a rising esports athlete chasing your dreams, or an indie developer looking to share your creation with the world. GAMERS TAG is a place where talent meets opportunity, where passion is celebrated, and where every voice in the gaming universe matters.
+We envision a global community where barriers are eliminated and opportunities are accessible to all — whether you&aposre a casual player finding your tribe, a rising esports athlete chasing your dreams, or an indie developer looking to share your creation with the world. GAMERS TAG is a place where talent meets opportunity, where passion is celebrated, and where every voice in the gaming universe matters.
 
-Our platform is designed to empower every stakeholder in the industry. Gamers can showcase their skills, build their personal brand, and connect with like-minded individuals. Developers can gain visibility, receive community feedback, and build loyal followings. Brands can engage with authentic audiences and contribute meaningfully to the culture of gaming. Together, we’re shaping a future where gaming is not just a pastime, but a powerful vehicle for creativity, collaboration, and career growth.
+Our platform is designed to empower every stakeholder in the industry. Gamers can showcase their skills, build their personal brand, and connect with like-minded individuals. Developers can gain visibility, receive community feedback, and build loyal followings. Brands can engage with authentic audiences and contribute meaningfully to the culture of gaming. Together, we&apos;re shaping a future where gaming is not just a pastime, but a powerful vehicle for creativity, collaboration, and career growth.
 
-GAMERS TAG isn’t just a product — it’s a movement. A movement to foster inclusivity, elevate voices that have long been underrepresented, and bring the fragmented corners of the gaming world into one thriving, unified space. We’re here to change the game — for good.
+GAMERS TAG isn&apos;t just a product — it&apos;s a movement. A movement to foster inclusivity, elevate voices that have long been underrepresented, and bring the fragmented corners of the gaming world into one thriving, unified space. We&apos;re here to change the game — for good.
           </p>
         </div>
         <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
@@ -255,7 +255,7 @@ GAMERS TAG isn’t just a product — it’s a movement. A movement to foster in
 
 In this future, GAMERS TAG becomes the heartbeat of the gaming community — a central hub where passion meets purpose, where careers are launched, friendships are formed, and groundbreaking ideas are nurtured. We aim to foster an environment where opportunities are not limited by geography, resources, or background, but are abundant, inclusive, and accessible to everyone — from aspiring young gamers to elite professionals, from indie developers to global studios.
 
-Our vision is one where innovation is not just encouraged but embedded into the very DNA of our platform. We aspire to continually push the boundaries of technology, creativity, and connectivity, setting new benchmarks for user experience, community engagement, and industry standards. Whether it's through AI-powered matchmaking, immersive storytelling, or decentralized economies, GAMERS TAG is committed to leading the next wave of innovation in gaming.
+Our vision is one where innovation is not just encouraged but embedded into the very DNA of our platform. We aspire to continually push the boundaries of technology, creativity, and connectivity, setting new benchmarks for user experience, community engagement, and industry standards. Whether it&apos;s through AI-powered matchmaking, immersive storytelling, or decentralized economies, GAMERS TAG is committed to leading the next wave of innovation in gaming.
 
 Ultimately, we are building a future where GAMERS TAG is synonymous with empowerment, excellence, and evolution — a place where dreams take root, talent is recognized, and the full potential of the gaming world is unleashed.          </p>
         </div>
