@@ -42,7 +42,7 @@ export default function ContactPage() {
             <div className="md:w-1/2">
               <h2 className="text-2xl font-bold mb-4">Welcome to GAMERS TAG</h2>
               <p className="mb-4">
-                GAMERS TAG is the world's first all-in-one Gaming Super App with B2B,B2C and B2B2C features, revolutionizing the future of gaming and esports. Our platform offers world class features such as Jobs Listing and Applying, Bite News, Chat, Networking, Social Linking, and Gamification and others for gamers and tech enthusiasts, students, brands and others.
+                GAMERS TAG is the world&apos;s first all-in-one Gaming Super App with B2B,B2C and B2B2C features, revolutionizing the future of gaming and esports. Our platform offers world class features such as Jobs Listing and Applying, Bite News, Chat, Networking, Social Linking, and Gamification and others for gamers and tech enthusiasts, students, brands and others.
               </p>
             </div>
             <div className="md:w-1/2">
