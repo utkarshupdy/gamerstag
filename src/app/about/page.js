@@ -4,10 +4,23 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function AboutUsPage() {
   const [activeSlide, setActiveSlide] = useState(0);
-//   const slidesRef = useRef(null);
+  
+  // Linear gradient styles
+  const redGradient = 'linear-gradient(to bottom, #DE2234, #BB0130)';
+  const whiteGradient = 'linear-gradient(to bottom, #FFFFFF, #999999)';
+  
+  // Text gradient style for all text elements
+  const textGradientStyle = {
+    background: whiteGradient,
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'white', // Fallback
+    display: 'inline-block'
+  };
   
   // Sample achievements data
- const achievements = [
+  const achievements = [
     {
       title: "FREE",
       subtitle: "Anyone Can use.",
@@ -35,30 +48,7 @@ export default function AboutUsPage() {
     }
   ];
   
-  // Special features data
-//   const specialFeatures = [
-//     {
-//       title: "All-in-one Platform",
-//       description: "Integrating all gaming needs in a single super app with seamless experience",
-//       icon: "⚡"
-//     },
-//     {
-//       title: "Community Driven",
-//       description: "Built by gamers for gamers, with continuous feedback and improvement",
-//       icon: "👨‍👩‍👧‍👦"
-//     },
-//     {
-//       title: "Revolutionary Technology",
-//       description: "Using cutting-edge tech to provide the best gaming experience possible",
-//       icon: "💻"
-//     },
-//     {
-//       title: "Global Reach",
-//       description: "Connecting gamers, brands, and enthusiasts from around the world",
-//       icon: "🌐"
-//     }
-//   ];
-const [specialFeatures] = useState([
+  const [specialFeatures] = useState([
     {
       icon: <Users size={48} color="#fff" />,
       title: "The Dream Team",
@@ -81,7 +71,6 @@ const [specialFeatures] = useState([
     }
   ]);
 
-  
   const handlePrevSlide = () => {
     setActiveSlide((prev) => (prev === 0 ? achievements.length - 1 : prev - 1));
   };
@@ -100,20 +89,17 @@ const [specialFeatures] = useState([
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* About Us Header Section */}
-      <section className="bg-black py-16 px-4 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-5xl font-bold font-sans text-gray-300 uppercase tracking-wider mb-6">
+      {/* About Us Header Section with gradient styling */}
+      <header className="text-center w-full h-80 flex flex-col items-center justify-center py-12 bg-[#1A1A1A]">
+        <h1 className="text-5xl font-medium font-sans uppercase tracking-wider mb-6" style={{ letterSpacing: '0.05em', ...textGradientStyle }}>
           ABOUT US
-        </h2>
-        <p className="text-gray-400 text-lg leading-relaxed">
-          We started this adventure to make gamers to dream bigger, with each keystroke a step closer to success.
-        </p>
-      </div>
-      {/* <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div> */}
-    </section>
-    <div className="mt-7 border-b-3 border-red-600 mx-auto w-full"></div>
-    {/* <div className="border-t-4 border-red-600 my-8"></div> */}
+        </h1>
+        <p style={{ letterSpacing: '0.05em', ...textGradientStyle }} className="text-lg leading-relaxed max-w-4xl mx-auto">
+        We started this adventure to make gamers to dream bigger, with each 
+        <br/>
+        keystroke a step closer to sucess.       </p>
+      </header>
+      <div className="border-b border-red-800 w-full"></div>
 
       {/* GAMERS TAG Introduction Section */}
       <section className="py-6 px-4">
@@ -128,16 +114,16 @@ const [specialFeatures] = useState([
             </div>
           </div>
           <div className="md:w-1/2">
-            <div className="border-l-6 border-red-600 pl-6 mb-8">
-              <h2 className="text-3xl font-bold font-sans mb-1">WE GAMERS TAG</h2>
-              <h2 className="text-xl font-normal font-sans mb-6">PRIVATE LIMITED INDIA</h2>
+            <div className="border-l-8 pl-6 mb-8 h-17" style={{ borderColor: '#BB0130' }}>
+              <h2 className="text-3xl font-medium font-sans mb-1" style={{ letterSpacing: '0.05em' }}>We GAMERS TAG</h2>
+              {/* <br/> */}
+              <h2 className="text-xl font-normal font-sans mb-6" style={{ letterSpacing: '0.05em' }}>PRIVATE LIMITED INDIA</h2>
             </div>
-            <p className="text-gray-300 font-sans leading-relaxed mb-6">
-              Founded in 2020, GAMERS TAG has quickly grown from a small startup to a global platform serving users across 25+ countries. Our team consists of passionate gamers, tech innovators, and industry veterans who understand the unique challenges and opportunities in the gaming ecosystem.
-            </p>
-            <p className="text-gray-300 font-sans leading-relaxed">
+            <p className="font-sans leading-relaxed text-lg mb-6" style={{ letterSpacing: '0.10em' , ...textGradientStyle}}>
+            We are Gamers Tag, a vibrant startup founded in 2021 in the beautiful city of Kochi, Kerala, India. Dedicated to transforming the gaming and esports industry, we are fueled by the passion of gamers and guided by the expertise of experienced leaders and top talent from across the globe. Together with our community, we are shaping the future of gaming through innovation, excellence, and a shared vision for greatness.            </p>
+            {/* <p className="font-sans leading-relaxed" style={textGradientStyle}>
               GAMERS TAG offers world-class features such as Jobs Listing and Applying, Bite News, Chat, Networking, Social Linking, and Gamification for gamers, tech enthusiasts, students, brands, and others. Our mission is to create a unified platform where all gaming needs can be met in one place.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -145,152 +131,167 @@ const [specialFeatures] = useState([
       {/* Quote Section */}
       <section className="bg-black py-6 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <blockquote className="text-2xl font-light font-sans italic text-gray-300 mb-6">
-          &quot;The future of gaming is not just about playing games, it&apos;s about building communities, creating opportunities, and establishing connections that transcend traditional boundaries. At GAMERS TAG, we&apos;re building that future today.&quot;
-          </blockquote>
+          <blockquote className="text-4xl font-light font-jost  mb-6" style={{ letterSpacing: '0.10em' , ...textGradientStyle}}>
+          "A dream platform for anyone to become great to greatest."          </blockquote>
           <div className="flex justify-end">
-            <cite className="text-right text-xl text-slate-300 font-bold">
+            <cite className="text-right text-xl font-light" style={{letterSpacing: '0.10em' ,...textGradientStyle}}>
               - JOSHUA J KANATT 
             </cite>
-            
-
           </div>
         </div>
-        <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
+        <div className="mt-12 border-b border-red-800 w-full"></div>
       </section>
 
-      {/* Why We Started Section */}
+      {/* How did it started Section */}
       <section className="py-6 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="border-l-6 border-red-600 pl-6 mb-8">
-            <h2 className="text-3xl font-sans font-normal mb-6">How did it started ?</h2>
-          </div>
-          <p className="text-gray-300 font-sans leading-relaxed max-w-4xl mb-6">
-            The gaming industry has long been fragmented, with players having to navigate multiple platforms for different needs - one for finding jobs, another for news, yet another for networking. We recognized this challenge and envisioned a unified solution that would bring everything together.
-          </p>
-          <p className="text-gray-300 leading-relaxed max-w-4xl">
-            Our founders, being avid gamers themselves, experienced these frustrations firsthand. They decided to channel their passion and expertise into creating a platform that would address these pain points and revolutionize how gamers interact with the ecosystem. Thus, GAMERS TAG was born - not just as a business venture, but as a solution created by gamers, for gamers.
-          </p>
+        <div className="border-l-8 pl-4 mb-8 h-12 flex items-center" style={{ borderColor: '#BB0130' }}>
+          <h2 className="text-3xl font-sans font-normal"  style={{letterSpacing: '0.02em'}}>
+            How did it started ?
+          </h2>
         </div>
-        <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
+
+          <p className="font-jost text-lg leading-relaxed max-w-4xl mb-6"  style={{letterSpacing: '0.10em' ,...textGradientStyle}}>
+          Founded in 2021 and based in Kochi, Kerala, India is a dynamic startup dedicated to transforming the gaming & esports industry. Backed by strong, experienced members and top talent from around the globe, we are supported by a passionate community of gamers and industry leaders. Together, we aim to shape the future of gaming and esports with innovation and excellence.          </p>
+          {/* <p className="leading-relaxed max-w-4xl" style={textGradientStyle}>
+            Our founders, being avid gamers themselves, experienced these frustrations firsthand. They decided to channel their passion and expertise into creating a platform that would address these pain points and revolutionize how gamers interact with the ecosystem. Thus, GAMERS TAG was born - not just as a business venture, but as a solution created by gamers, for gamers.
+          </p> */}
+        </div>
+        <div className="mt-12 border-b border-red-800 w-full"></div>
       </section>
 
-      {/* Why We Are Special Section */}
-      {/* <section className="py-6 px-4 ">
-        <div className="max-w-6xl mx-auto">
-          <div className="border-l-4 border-red-600 pl-6 mb-12">
-            <h2 className="text-3xl font-normal font-sans mb-6">What are we special?</h2>
+      {/* What we are Special Section */}
+      <section className="py-6 px-4 bg-black">
+        <div className="max-w-6xl font-sans mx-auto">
+        <div className="border-l-8 pl-4 mb-8 h-12 flex items-center" style={{ borderColor: '#BB0130' }}>
+        <h2 className="text-3xl font-sans font-normal"  style={{letterSpacing: '0.02em'}}>
+              What we are Special ?</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specialFeatures.map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded transition-transform duration-300 hover:transform hover:-translate-y-2">
-                <div className="text-4xl mb-4 text-red-500">{feature.icon}</div>
-                <h3 className="text-xl font-normal mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+              <div 
+                key={index} 
+                className="p-6 rounded flex flex-col items-center text-center hover:shadow-lg transition-all duration-300"
+                style={{ background: index === 0 ? redGradient : '#232323' }}
+                onMouseEnter={(e) => {
+                  if (index !== 0) {
+                    e.currentTarget.style.background = redGradient;
+                    e.currentTarget.style.opacity = '0.9';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (index !== 0) {
+                    e.currentTarget.style.background = '#232323';
+                    e.currentTarget.style.opacity = '1';
+                  }
+                }}
+              >
+                <div className="mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3" style={textGradientStyle}>{feature.title}</h3>
+                <p className="text-sm" style={textGradientStyle}>{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
-      </section> */}
-      <section className="py-6 px-4 bg-black text-white">
-      <div className="max-w-6xl  font-sans mx-auto">
-        <div className="border-l-6 border-red-600 pl-6 mb-12">
-          <h2 className="text-3xl font-normal mb-2">What we are Special ?</h2>
-        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {specialFeatures.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-gray-800 p-6 rounded flex flex-col items-center text-center hover:shadow-lg transition-all duration-300"
-            >
-              <div className="mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-400 text-sm">{feature.description}</p>
-            </div>
-          ))}
+        <div className="flex justify-center mt-12">
+          <div className="flex space-x-2">
+            {[0, 1, 2, 3].map((dot) => (
+              <div 
+                key={dot} 
+                className="h-2 w-2 rounded-full" 
+                style={{ background: dot === activeSlide ? redGradient : whiteGradient }}
+              ></div>
+            ))}
+          </div>
         </div>
-      </div>
-      
-      <div className="flex justify-center mt-12">
-        <div className="flex space-x-2">
-          {[0, 1, 2, 3].map((dot) => (
-            <div key={dot} className="h-2 w-2 rounded-full bg-gray-600"></div>
-          ))}
-        </div>
-      </div>
-      <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
-    </section>
+        <div className="mt-12 border-b border-red-800 w-full"></div>
+      </section>
 
       {/* Our Mission Section */}
       <section className="py-6 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="border-l-6 border-red-600 pl-6 mb-8">
-            <h2 className="text-3xl font-sans font-normal mb-6">Our Mission</h2>
+        <div className="border-l-8 pl-4 mb-8 h-12 flex items-center" style={{ borderColor: '#BB0130' }}>
+        <h2 className="text-3xl font-sans font-normal"  style={{letterSpacing: '0.02em'}}>
+              Our Mission</h2>
           </div>
-          <p className="text-gray-300 font-sans leading-relaxed max-w-4xl">
-          At GAMERS TAG, our mission goes far beyond creating a platform — we aim to revolutionize the way the gaming world connects, grows, and thrives. We are building the world&apos;s most comprehensive and inclusive gaming ecosystem, one that unites gamers of all levels, connects innovative brands, and propels the dynamic growth of esports and interactive entertainment.
-
-We envision a global community where barriers are eliminated and opportunities are accessible to all — whether you&aposre a casual player finding your tribe, a rising esports athlete chasing your dreams, or an indie developer looking to share your creation with the world. GAMERS TAG is a place where talent meets opportunity, where passion is celebrated, and where every voice in the gaming universe matters.
-
-Our platform is designed to empower every stakeholder in the industry. Gamers can showcase their skills, build their personal brand, and connect with like-minded individuals. Developers can gain visibility, receive community feedback, and build loyal followings. Brands can engage with authentic audiences and contribute meaningfully to the culture of gaming. Together, we&apos;re shaping a future where gaming is not just a pastime, but a powerful vehicle for creativity, collaboration, and career growth.
-
-GAMERS TAG isn&apos;t just a product — it&apos;s a movement. A movement to foster inclusivity, elevate voices that have long been underrepresented, and bring the fragmented corners of the gaming world into one thriving, unified space. We&apos;re here to change the game — for good.
+          <p className="font-sans leading-relaxed text-lg max-w-4xl" style={{letterSpacing: '0.10em', ...textGradientStyle}}>
+          At GAMERS TAG, our mission goes far beyond building a gaming platform, we are on a mission to transform the way the entire gaming world connects, grows, and thrives. We aim to increase the market cap of the gaming industry by 10x in the next five years by expanding its horizons and bringing every voice in gaming closer to opportunity. We are in pursuit for bringing multiple impactful features tailored for each stakeholder in the industry, unlocking the full potential of every individual, team, and brand within the gaming ecosystem. We’re not just building an app,  we’re building the world’s biggest, most inclusive and exclusive gaming universe. 
+          <br/><br/>
+          For our B2C users especially  gamers, esports athletes, fans, streamers, creators, developers, organizers, analysts, and tech talents, our mission is to unlock growth, income, and recognition. We want to multiply opportunities, open new revenue streams, and create spaces where individuals can build personal brands, engage with real communities, and turn their love for gaming into a profession. From brining grassroot esports players to global stage, giving creators wider reach, to promoting streamers add more spotlight, to offering game developers a stage for feedback and discovery.  GAMERS TAG is built for every player in the game. It’s a platform where anyone can shine, where dreams become careers, and where the gaming community finds its heartbeat.
+          <br/><br/>
+For our B2B , Our mission is to build the most effective pipeline for global brands to effortlessly invest and tap into the gaming sector and easily elavate brand engagement. We aim to be the ultimate bridge between gaming and the world of business, whether it’s small gaming teams, esports organizations, game developers, tech brands, consumer brands, or publishers. We enable brands to engage with deeply authentic gaming audiences, collaborate with esports teams, and gain impactful visibility through strategic collaborations. GAMERS TAG will simplify networking, fuel endorsements, and help rising stars reach global stages  all while growing the culture and business of gaming.            <br/><br/>
+            {/* GAMERS TAG isn't just a product — it's a movement. A movement to foster inclusivity, elevate voices that have long been underrepresented, and bring the fragmented corners of the gaming world into one thriving, unified space. We're here to change the game — for good. */}
           </p>
         </div>
-        <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
+        <div className="mt-12 border-b border-red-800 w-full"></div>
       </section>
 
       {/* Our Vision Section */}
       <section className="py-6 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
-          <div className="border-l-6 border-red-600 pl-6 mb-8">
-            <h2 className="text-3xl font-sans font-normal mb-6">Our Vision</h2>
+        <div className="border-l-8 pl-4 mb-8 h-12 flex items-center" style={{ borderColor: '#BB0130' }}>
+        <h2 className="text-3xl font-sans font-normal"  style={{letterSpacing: '0.02em'}}>
+              Our Vision</h2>
           </div>
-          <p className="text-gray-300 font-sans leading-relaxed max-w-4xl">
-          We envision a future where GAMERS TAG stands at the very core of the global gaming universe — not merely as a platform, but as a powerful catalyst for transformation, opportunity, and progress. Our goal is to build more than just a successful company; we are laying the foundation for a thriving, interconnected ecosystem that redefines how the gaming industry operates and evolves. We see a world where gamers, developers, brands, and creators are no longer isolated within fragmented spaces, but instead united within one seamless and empowering environment.
-
-In this future, GAMERS TAG becomes the heartbeat of the gaming community — a central hub where passion meets purpose, where careers are launched, friendships are formed, and groundbreaking ideas are nurtured. We aim to foster an environment where opportunities are not limited by geography, resources, or background, but are abundant, inclusive, and accessible to everyone — from aspiring young gamers to elite professionals, from indie developers to global studios.
-
-Our vision is one where innovation is not just encouraged but embedded into the very DNA of our platform. We aspire to continually push the boundaries of technology, creativity, and connectivity, setting new benchmarks for user experience, community engagement, and industry standards. Whether it&apos;s through AI-powered matchmaking, immersive storytelling, or decentralized economies, GAMERS TAG is committed to leading the next wave of innovation in gaming.
-
-Ultimately, we are building a future where GAMERS TAG is synonymous with empowerment, excellence, and evolution — a place where dreams take root, talent is recognized, and the full potential of the gaming world is unleashed.          </p>
+          <p className="font-sans leading-relaxed text-lg max-w-4xl" style={{letterSpacing: '0.10em', ...textGradientStyle}}>
+          Our vision to be the world’s leading platform that transforms the gaming ecosystem by empowering gamers, esports athletes, creators, and streamers with limitless opportunities. We envision a future where brands and organizations seamlessly connect with the gaming community, achieving unmatched engagement and impact. Through continuous innovation, strong partnerships, and a commitment to excellence, we aim to set the gold standard for esports and gaming, driving its growth as the most dynamic and influential industry globally.            {/* <br/><br/>
+            In this future, GAMERS TAG becomes the heartbeat of the gaming community — a central hub where passion meets purpose, where careers are launched, friendships are formed, and groundbreaking ideas are nurtured. We aim to foster an environment where opportunities are not limited by geography, resources, or background, but are abundant, inclusive, and accessible to everyone — from aspiring young gamers to elite professionals, from indie developers to global studios.
+            <br/><br/>
+            Our vision is one where innovation is not just encouraged but embedded into the very DNA of our platform. We aspire to continually push the boundaries of technology, creativity, and connectivity, setting new benchmarks for user experience, community engagement, and industry standards. Whether it's through AI-powered matchmaking, immersive storytelling, or decentralized economies, GAMERS TAG is committed to leading the next wave of innovation in gaming.
+            <br/><br/>
+            Ultimately, we are building a future where GAMERS TAG is synonymous with empowerment, excellence, and evolution — a place where dreams take root, talent is recognized, and the full potential of the gaming world is unleashed. */}
+          </p>
         </div>
-        <div className="mt-12 border-b-3 border-red-600 mx-auto w-full"></div>
+        <div className="mt-12 border-b border-red-800 w-full"></div>
       </section>
 
-      {/* We Are Proud Of Section with Sliding Cards */}
-      <section className="py-12 px-4 bg-black text-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="border-l-6 border-red-600 pl-6 mb-12">
-          <h2 className="text-3xl font-normal mb-2">We are proud of</h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="h-px w-full bg-gray-600 mb-6"></div>
-              <h3 className="text-6xl font-bold mb-4 text-gray-300" 
-                  style={{ 
-                    fontFamily: 'monospace', 
-                    letterSpacing: '2px', 
-                    WebkitTextStroke: '1px rgba(255,255,255,0.2)',
-                    textShadow: '0 0 1px rgba(255,255,255,0.1)'
-                  }}>
-                {achievement.title}
-              </h3>
-              <div className="text-left">
-                <p className="text-white font-medium mb-1">{achievement.subtitle}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{achievement.description}</p>
+      {/* We Are Proud Of Section with styled cards */}
+      <section className="py-12 px-4 bg-black">
+        <div className="max-w-6xl mx-auto">
+        <div className="border-l-8 pl-4 mb-8 h-12 flex items-center" style={{ borderColor: '#BB0130' }}>
+        <h2 className="text-3xl font-sans font-normal"  style={{letterSpacing: '0.02em'}}>
+              We are proud of</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {achievements.map((achievement, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col" 
+                style={{ 
+                  background: index === activeSlide ? '#232323' : 'transparent',
+                  padding: '20px',
+                  borderRadius: '4px',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <div className="h-px w-full mb-6" style={{ background: whiteGradient }}></div>
+                <h3 className="text-6xl font-bold mb-4" 
+                    style={{ 
+                      background: redGradient,
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      fontFamily: 'monospace', 
+                      letterSpacing: '2px', 
+                      textShadow: '0 0 1px rgba(255,255,255,0.1)',
+                      display: 'inline-block'
+                    }}>
+                  {achievement.title}
+                </h3>
+                <div className="text-left">
+                  <p className="font-medium mb-1" style={{letterSpacing: '0.02em'}}>{achievement.subtitle}</p>
+                  <p className="text-sm leading-relaxed" style={textGradientStyle}>{achievement.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }
