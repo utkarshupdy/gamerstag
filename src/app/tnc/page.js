@@ -158,7 +158,7 @@ const TermsAndConditionsPage = () => {
           <section>
             <h3 className="text-2xl font-medium mb-2" style={{ ...textGradientStyle }}>14. Disclaimer of Warranties</h3>
             <p className="text-[#A6A6A6]" style={{ letterSpacing: '0.07em' }}>
-              The app is provided on an "as-is" basis without warranties of any kind. We do not guarantee that the app will be error-free or uninterrupted.
+              The app is provided on an &quot;as-is&quot; basis without warranties of any kind. We do not guarantee that the app will be error-free or uninterrupted.
             </p>
           </section>
           

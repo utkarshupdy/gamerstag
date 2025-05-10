@@ -132,7 +132,7 @@ export default function AboutUsPage() {
       <section className="bg-black py-6 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-4xl font-light font-jost  mb-6" style={{ letterSpacing: '0.10em' , ...textGradientStyle}}>
-          "A dream platform for anyone to become great to greatest."          </blockquote>
+          &quot;A dream platform for anyone to become great to greatest.&quot;          </blockquote>
           <div className="flex justify-end">
             <cite className="text-right text-xl font-light" style={{letterSpacing: '0.10em' ,...textGradientStyle}}>
               - JOSHUA J KANATT 

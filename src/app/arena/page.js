@@ -143,7 +143,7 @@ export default function GTArenaPage() {
         <div className="text-center my-12">
           <h2 className="text-4xl font-light mb-1" style={{ letterSpacing: '0.10em' }}>ALL IN ONE ESPORTS TOURNAMENT HOSTING</h2>
           <p className="text-gray-300 mt-2" style={textGradientStyle}>
-          "Why juggle multiple platforms when you can do it all in one ? Welcome to the future of laziness!"          </p>
+          &quot;Why juggle multiple platforms when you can do it all in one ? Welcome to the future of laziness!&quot;          </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
             <Button>Host Now</Button>
             <Button>We Host For You</Button>
