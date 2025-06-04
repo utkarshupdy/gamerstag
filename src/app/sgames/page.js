@@ -139,6 +139,7 @@ export default function SupportedGamesPage() {
             <div
               key={game.id}
               className="relative bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105"
+              // onClick={() => router.push(`/game?id=${game.id}`)}
               onMouseEnter={() => setHoveredCard(game.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -188,7 +189,7 @@ export default function SupportedGamesPage() {
                     {game.role}
                   </p>
                   <button 
-                    onClick={() => router.push(`/igame?id=${game.id}`)}
+                    onClick={() => router.push(`/igame/${game.id}`)}
                     className="px-4 py-2 text-sm font-medium border border-white hover:bg-white hover:text-black transition-all duration-300 rounded"
                     style={{ letterSpacing: '0.05em' }}
                   >

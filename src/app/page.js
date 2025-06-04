@@ -217,7 +217,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <Link href="/igames" passHref>
+          <Link href="/igames/1" passHref>
             <div
               className={`
                 relative group cursor-pointer transform transition-all duration-300

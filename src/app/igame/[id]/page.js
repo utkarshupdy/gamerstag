@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useParams  } from 'next/navigation';
 import Image from 'next/image';
 
 export default function GamePage() {
-  const searchParams = useSearchParams();
-  const id = searchParams.get('id');
+  // const searchParams = useSearchParams();
+  const params = useParams();
+  const id = params.id;
+  // const id = searchParams.get('id');
 
   const [timeLeft, setTimeLeft] = useState({
     days: 365,
