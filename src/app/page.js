@@ -153,6 +153,91 @@ export default function Home() {
               </div>
             </div>
           </Link>
+
+          <Link href="/members" passHref>
+            <div
+              className={`
+                relative group cursor-pointer transform transition-all duration-300
+                ${activeButton === 'arena' ? 'scale-105' : 'hover:scale-105'}
+              `}
+              onMouseEnter={() => handleButtonHover('arena')}
+              onMouseLeave={() => handleButtonHover(null)}
+            >
+              <div 
+                className={`
+                  absolute -inset-0.5 rounded-lg bg-gradient-to-r from-red-500 to-red-700
+                  opacity-75 transition duration-300 group-hover:opacity-100 group-hover:blur-sm
+                `}
+              ></div>
+              <div className="relative bg-black/90 text-white rounded-lg px-8 py-6 flex flex-col items-center justify-center h-full border border-red-800/50">
+                <div className="w-1 h-8 bg-red-600 absolute left-0 top-6"></div>
+                <span className="text-2xl font-bold tracking-wide">Team Members</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/mentors" passHref>
+            <div
+              className={`
+                relative group cursor-pointer transform transition-all duration-300
+                ${activeButton === 'arena' ? 'scale-105' : 'hover:scale-105'}
+              `}
+              onMouseEnter={() => handleButtonHover('arena')}
+              onMouseLeave={() => handleButtonHover(null)}
+            >
+              <div 
+                className={`
+                  absolute -inset-0.5 rounded-lg bg-gradient-to-r from-red-500 to-red-700
+                  opacity-75 transition duration-300 group-hover:opacity-100 group-hover:blur-sm
+                `}
+              ></div>
+              <div className="relative bg-black/90 text-white rounded-lg px-8 py-6 flex flex-col items-center justify-center h-full border border-red-800/50">
+                <div className="w-1 h-8 bg-red-600 absolute left-0 top-6"></div>
+                <span className="text-2xl font-bold tracking-wide">Mentors</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/sgames" passHref>
+            <div
+              className={`
+                relative group cursor-pointer transform transition-all duration-300
+                ${activeButton === 'arena' ? 'scale-105' : 'hover:scale-105'}
+              `}
+              onMouseEnter={() => handleButtonHover('arena')}
+              onMouseLeave={() => handleButtonHover(null)}
+            >
+              <div 
+                className={`
+                  absolute -inset-0.5 rounded-lg bg-gradient-to-r from-red-500 to-red-700
+                  opacity-75 transition duration-300 group-hover:opacity-100 group-hover:blur-sm
+                `}
+              ></div>
+              <div className="relative bg-black/90 text-white rounded-lg px-8 py-6 flex flex-col items-center justify-center h-full border border-red-800/50">
+                <div className="w-1 h-8 bg-red-600 absolute left-0 top-6"></div>
+                <span className="text-2xl font-bold tracking-wide">Support Games</span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/igames" passHref>
+            <div
+              className={`
+                relative group cursor-pointer transform transition-all duration-300
+                ${activeButton === 'arena' ? 'scale-105' : 'hover:scale-105'}
+              `}
+              onMouseEnter={() => handleButtonHover('arena')}
+              onMouseLeave={() => handleButtonHover(null)}
+            >
+              <div 
+                className={`
+                  absolute -inset-0.5 rounded-lg bg-gradient-to-r from-red-500 to-red-700
+                  opacity-75 transition duration-300 group-hover:opacity-100 group-hover:blur-sm
+                `}
+              ></div>
+              <div className="relative bg-black/90 text-white rounded-lg px-8 py-6 flex flex-col items-center justify-center h-full border border-red-800/50">
+                <div className="w-1 h-8 bg-red-600 absolute left-0 top-6"></div>
+                <span className="text-2xl font-bold tracking-wide">Individual Games Details</span>
+              </div>
+            </div>
+          </Link>
         </div>
 
         {/* Call to action */}
