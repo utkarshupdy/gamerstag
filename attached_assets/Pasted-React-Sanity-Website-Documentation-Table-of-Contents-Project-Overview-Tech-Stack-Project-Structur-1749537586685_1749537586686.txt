@@ -1,0 +1,513 @@
+React + Sanity Website Documentation
+Table of Contents
+
+Project Overview
+Tech Stack
+Project Structure
+Setup Instructions
+SEO Implementation
+Performance Optimization
+Theming System
+Typography System
+Pagination Implementation
+Deployment Guide
+
+Project Overview
+A high-performance React website integrated with Sanity CMS, featuring:
+
+Server-side rendering with Next.js
+Advanced SEO optimization
+Global theming system
+Responsive design
+Fast loading speeds
+Comprehensive pagination
+Structured data markup
+
+Tech Stack
+Frontend
+
+Next.js 14 (App Router)
+React 18 with TypeScript
+Tailwind CSS for styling
+Framer Motion for animations
+React Query for data fetching
+
+Backend & CMS
+
+Sanity Studio for content management
+Sanity Client for data fetching
+GROQ for queries
+
+SEO & Performance
+
+Next SEO for meta tags
+Schema.org structured data
+Sitemap generation
+Image optimization
+Bundle analysis
+
+Project Structure
+src/
+├── app/                    # Next.js App Router
+│   ├── (pages)/           # Route groups
+│   ├── api/               # API routes
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── ui/               # Base UI components
+│   ├── layout/           # Layout components
+│   ├── seo/              # SEO components
+│   └── common/           # Common components
+├── lib/                  # Utilities and configurations
+│   ├── sanity/           # Sanity configuration
+│   ├── seo/              # SEO utilities
+│   ├── utils/            # Helper functions
+│   └── types/            # TypeScript types
+├── styles/               # Style configurations
+│   ├── globals.css       # Global CSS
+│   └── themes.ts         # Theme definitions
+├── hooks/                # Custom React hooks
+├── context/              # React context providers
+└── data/                 # Static data and constants
+Setup Instructions
+1. Environment Setup
+bash# Clone the repository
+git clone <your-repo-url>
+cd react-sanity-website
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env.local
+2. Environment Variables
+env# Sanity Configuration
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_TOKEN=your_api_token
+
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://yoursite.com
+NEXT_PUBLIC_SITE_NAME=Your Site Name
+
+# Analytics (Optional)
+GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
+3. Sanity Studio Setup
+bash# Install Sanity CLI
+npm install -g @sanity/cli
+
+# Initialize Sanity project
+sanity init
+
+# Start Sanity Studio
+cd sanity-studio
+sanity start
+SEO Implementation
+Meta Tags Strategy
+typescript// lib/seo/meta-tags.ts
+export interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product';
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+export const generateMetaTags = (seo: SEOProps) => ({
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords?.join(', '),
+  openGraph: {
+    title: seo.title,
+    description: seo.description,
+    type: seo.type || 'website',
+    url: seo.url,
+    images: seo.image ? [{ url: seo.image }] : [],
+    publishedTime: seo.publishedTime,
+    modifiedTime: seo.modifiedTime,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seo.title,
+    description: seo.description,
+    images: seo.image ? [seo.image] : [],
+  },
+});
+Structured Data (Schema Markup)
+typescript// components/seo/StructuredData.tsx
+interface StructuredDataProps {
+  type: 'Organization' | 'Article' | 'Product' | 'WebPage';
+  data: any;
+}
+
+export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const generateSchema = () => {
+    const baseSchema = {
+      '@context': 'https://schema.org',
+      '@type': type,
+      ...data,
+    };
+    
+    return JSON.stringify(baseSchema);
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: generateSchema() }}
+    />
+  );
+};
+Internal Linking Strategy
+typescript// components/common/SmartLink.tsx
+interface SmartLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  title?: string;
+}
+
+export const SmartLink: React.FC<SmartLinkProps> = ({ 
+  href, 
+  children, 
+  className,
+  title 
+}) => {
+  const isInternal = href.startsWith('/');
+  const isAnchor = href.startsWith('#');
+  
+  if (isInternal || isAnchor) {
+    return (
+      <Link href={href} className={className} title={title}>
+        {children}
+      </Link>
+    );
+  }
+  
+  return (
+    <a 
+      href={href} 
+      className={className}
+      title={title}
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  );
+};
+Performance Optimization
+Image Optimization
+typescript// components/common/OptimizedImage.tsx
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  priority = false,
+  className,
+}) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      className={className}
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  );
+};
+Bundle Optimization
+javascript// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    optimizePackageImports: ['@sanity/client', 'framer-motion'],
+  },
+  images: {
+    domains: ['cdn.sanity.io'],
+    formats: ['image/avif', 'image/webp'],
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    return config;
+  },
+};
+
+module.exports = nextConfig;
+Theming System
+Color Palette
+typescript// styles/themes.ts
+export const colorThemes = {
+  default: {
+    primary: '#2563eb',      // Blue
+    secondary: '#7c3aed',    // Purple
+    accent: '#059669',       // Green
+    neutral: '#374151',      // Gray
+    background: '#ffffff',
+    surface: '#f9fafb',
+    text: '#111827',
+    textSecondary: '#6b7280',
+  },
+  dark: {
+    primary: '#3b82f6',
+    secondary: '#8b5cf6',
+    accent: '#10b981',
+    neutral: '#d1d5db',
+    background: '#0f172a',
+    surface: '#1e293b',
+    text: '#f8fafc',
+    textSecondary: '#94a3b8',
+  },
+  ocean: {
+    primary: '#0891b2',      // Cyan
+    secondary: '#0d9488',    // Teal
+    accent: '#1d4ed8',       // Indigo
+    neutral: '#475569',      // Slate
+    background: '#ffffff',
+    surface: '#f1f5f9',
+    text: '#0f172a',
+    textSecondary: '#64748b',
+  },
+};
+
+export type ColorTheme = keyof typeof colorThemes;
+Theme Provider
+typescript// context/ThemeContext.tsx
+interface ThemeContextType {
+  theme: ColorTheme;
+  setTheme: (theme: ColorTheme) => void;
+  colors: typeof colorThemes.default;
+}
+
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [theme, setTheme] = useState<ColorTheme>('default');
+  
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as ColorTheme;
+    if (savedTheme && colorThemes[savedTheme]) {
+      setTheme(savedTheme);
+    }
+  }, []);
+  
+  const colors = colorThemes[theme];
+  
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme, colors }}>
+      <div style={{ '--color-primary': colors.primary } as React.CSSProperties}>
+        {children}
+      </div>
+    </ThemeContext.Provider>
+  );
+};
+Typography System
+Font Classes
+css/* styles/typography.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Inter', system-ui, sans-serif;
+}
+
+.heading-1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  font-family: var(--font-primary);
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+  font-family: var(--font-primary);
+}
+
+.heading-3 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug;
+  font-family: var(--font-primary);
+}
+
+.sub-heading {
+  @apply text-xl md:text-2xl font-medium leading-relaxed;
+  font-family: var(--font-primary);
+}
+
+.description {
+  @apply text-base md:text-lg leading-relaxed;
+  font-family: var(--font-primary);
+}
+
+.body-text {
+  @apply text-sm md:text-base leading-normal;
+  font-family: var(--font-primary);
+}
+
+.caption {
+  @apply text-xs md:text-sm leading-tight;
+  font-family: var(--font-primary);
+}
+Pagination Implementation
+Pagination Component
+typescript// components/common/Pagination.tsx
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  showFirstLast?: boolean;
+  maxVisible?: number;
+}
+
+export const Pagination: React.FC<PaginationProps> = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+  showFirstLast = true,
+  maxVisible = 5,
+}) => {
+  const getVisiblePages = () => {
+    const half = Math.floor(maxVisible / 2);
+    let start = Math.max(1, currentPage - half);
+    let end = Math.min(totalPages, start + maxVisible - 1);
+    
+    if (end - start + 1 < maxVisible) {
+      start = Math.max(1, end - maxVisible + 1);
+    }
+    
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  };
+
+  const visiblePages = getVisiblePages();
+
+  return (
+    <nav className="flex items-center justify-center space-x-2">
+      {showFirstLast && currentPage > 1 && (
+        <button
+          onClick={() => onPageChange(1)}
+          className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          First
+        </button>
+      )}
+      
+      {currentPage > 1 && (
+        <button
+          onClick={() => onPageChange(currentPage - 1)}
+          className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Previous
+        </button>
+      )}
+      
+      {visiblePages.map((page) => (
+        <button
+          key={page}
+          onClick={() => onPageChange(page)}
+          className={`px-3 py-2 text-sm font-medium border rounded-md ${
+            page === currentPage
+              ? 'text-white bg-blue-600 border-blue-600'
+              : 'text-gray-500 bg-white border-gray-300 hover:bg-gray-50'
+          }`}
+        >
+          {page}
+        </button>
+      ))}
+      
+      {currentPage < totalPages && (
+        <button
+          onClick={() => onPageChange(currentPage + 1)}
+          className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Next
+        </button>
+      )}
+      
+      {showFirstLast && currentPage < totalPages && (
+        <button
+          onClick={() => onPageChange(totalPages)}
+          className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Last
+        </button>
+      )}
+    </nav>
+  );
+};
+Sanity Pagination Hook
+typescript// hooks/usePaginatedContent.ts
+interface UsePaginatedContentProps {
+  query: string;
+  params?: any;
+  pageSize?: number;
+}
+
+export const usePaginatedContent = ({
+  query,
+  params = {},
+  pageSize = 10,
+}: UsePaginatedContentProps) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [data, setData] = useState<any[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async (page: number) => {
+    setLoading(true);
+    try {
+      const start = (page - 1) * pageSize;
+      const end = start + pageSize;
+      
+      const [items, count] = await Promise.all([
+        sanityClient.fetch(`${query}[${start}...${end}]`, params),
+        sanityClient.fetch(`count((${query}))`, params),
+      ]);
+      
+      setData(items);
+      setTotalCount(count);
+    } catch (error) {
+      console.error('Error fetching paginated content:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData(currentPage);
+  }, [currentPage, query, params]);
+
+  const totalPages = Math.ceil(totalCount / pageSize);
+
+  return {
+    data,
+    currentPage,
+    totalPages,
+    totalCount,
+    loading,
+    setCurrentPage,
+    refetch: () => fetchData(currentPage),
+  };
+};

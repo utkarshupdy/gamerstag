@@ -1,0 +1,2105 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Audiowide&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bankgothic-md-bt');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Brand Variables - Change colors and fonts here to update entire website */
+:root {
+  --brand-primary: #E5042F;      /* Main red color */
+  --brand-white: #FFFFFF;        /* Main white color */
+  --brand-secondary: #00D9FF;    /* Cyan accent */
+  --brand-dark: #000000;         /* Black color */
+  --brand-background: #0A0A0A;   /* Dark background */
+  --brand-primary-rgb: 229, 4, 47;    /* RGB values for opacity usage */
+  --brand-white-rgb: 255, 255, 255;   /* RGB values for opacity usage */
+  
+  /* Typography System - Global Font Control */
+  --font-primary: 'BankGothic Md BT', 'Audiowide', 'Orbitron', monospace;        /* Headers and brand text */
+  --font-secondary: 'Space Grotesk', sans-serif; /* Navigation and UI elements */
+  --font-description: 'Jost', sans-serif;       /* All descriptions and body text */
+  --font-button: 'Jost', sans-serif;           /* Button text */
+  --font-mono: 'JetBrains Mono', monospace;    /* Code and technical text */
+}
+
+/* Critical Performance & CLS Fixes */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-description), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--brand-background);
+  color: var(--brand-white);
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-display: swap;
+}
+
+/* Global Typography Classes */
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+.font-description { font-family: var(--font-description); }
+.font-button { font-family: var(--font-button); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Apply Jost to all descriptions and paragraphs */
+p, .description, .text-description {
+  font-family: var(--font-description);
+}
+
+/* Wide Screen Responsive Utilities for Ultra-Wide Monitors */
+@layer utilities {
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply 3xl:max-w-8xl 3xl:px-12;
+    @apply 4xl:max-w-9xl 4xl:px-16;
+    @apply 5xl:max-w-10xl 5xl:px-20;
+  }
+
+  .grid-responsive-cards {
+    @apply grid gap-6;
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    @apply 3xl:grid-cols-4 3xl:gap-8;
+    @apply 4xl:grid-cols-5 4xl:gap-10;
+    @apply 5xl:grid-cols-6 5xl:gap-12;
+  }
+
+  .text-responsive-hero {
+    @apply text-6xl sm:text-7xl md:text-8xl lg:text-9xl;
+    @apply 3xl:text-10xl 4xl:text-11xl 5xl:text-12xl;
+    @apply leading-none tracking-tight;
+  }
+
+  .text-responsive-heading {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+    @apply 3xl:text-6xl 4xl:text-7xl 5xl:text-8xl;
+    @apply leading-tight;
+  }
+
+  .spacing-responsive-section {
+    @apply py-16 md:py-20 lg:py-24;
+    @apply 3xl:py-28 4xl:py-32 5xl:py-36;
+  }
+
+  .team-grid-responsive {
+    @apply grid gap-6;
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+    @apply 3xl:grid-cols-3 3xl:gap-8;
+    @apply 4xl:grid-cols-4 4xl:gap-10;
+    @apply 5xl:grid-cols-5 5xl:gap-12;
+  }
+}
+
+/* Custom HUD Scrollbar for Dropdown Menus */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E5042F, #E5042F80);
+  border-radius: 0;
+  border: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #E5042F, #E5042F);
+}
+
+/* Firefox scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #E5042F rgba(0, 0, 0, 0.2);
+}
+
+/* BankGothic Font Fallback */
+@font-face {
+  font-family: 'BankGothic-Fallback';
+  src: local('Audiowide'), local('Orbitron'), local('Impact'), local('Arial Black');
+  font-display: swap;
+}
+
+/* Loading Screen Specific Styles */
+.loading-canvas {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Prevent body scroll during loading */
+.loading-active {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Matrix rain optimization */
+.matrix-container {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Apply Jost to all buttons */
+button, .btn, .button, [role="button"] {
+  font-family: var(--font-button);
+}
+
+/* Headers keep primary font */
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: var(--font-primary);
+}
+
+/* Navigation and UI elements */
+nav, .nav, .menu, .ui-element {
+  font-family: var(--font-secondary);
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Prevent Layout Shifts */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  padding-top: 80px; /* Reserve space for fixed navigation */
+}
+
+/* Navigation fixed positioning to prevent CLS */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  will-change: transform;
+}
+
+/* Image containers to prevent CLS */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Skeleton loaders for CLS prevention */
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Dynamic content containers */
+.dynamic-content {
+  min-height: 200px;
+  transition: height 0.3s ease;
+}
+
+/* Font loading optimization with complete font family support */
+@font-face {
+  font-family: 'Orbitron';
+  font-display: swap;
+  src: url('/fonts/orbitron.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-display: swap;
+  src: url('/fonts/space-grotesk.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-display: swap;
+  src: url('/fonts/jost.woff2') format('woff2');
+}
+
+/* Jost is already imported in the main Google Fonts import above */
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Rectangular Button System - Override all trapezium styles */
+[style*="clipPath"] {
+  clip-path: none !important;
+}
+
+/* Global override for any remaining clip-path styles */
+.btn-cyberpunk,
+.btn-cyber-solid,
+.cyberpunk-button,
+.gaming-button,
+button[style*="clipPath"],
+*[style*="polygon"] {
+  clip-path: none !important;
+  border-radius: 0 !important;
+}
+
+/* Social Icons Color Fix */
+.group:hover .social-icon {
+  color: #000000 !important;
+}
+
+/* Gaming HUD border effects */
+@keyframes hudPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes hudScan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+/* 3D Interactive Light Effects */
+@keyframes lightSweep {
+  0% { transform: translateX(-100%) skewX(-15deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%) skewX(-15deg); opacity: 0; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 5px rgba(229, 4, 47, 0.3),
+      0 0 10px rgba(229, 4, 47, 0.2),
+      0 0 15px rgba(229, 4, 47, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 10px rgba(229, 4, 47, 0.6),
+      0 0 20px rgba(229, 4, 47, 0.4),
+      0 0 30px rgba(229, 4, 47, 0.2);
+  }
+}
+
+.rectangular-button:focus-visible {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.rectangular-button:hover::before {
+  animation: lightSweep 0.6s ease-out;
+}
+
+.rectangular-button {
+  position: relative;
+  border: 2px solid;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 0;
+  clip-path: none;
+  background-clip: padding-box;
+}
+
+.rectangular-button--red {
+  background-color: #E5042F;
+  border-color: #E5042F;
+  color: white !important;
+  box-shadow: 
+    0 4px 8px rgba(229, 4, 47, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.rectangular-button--red:hover {
+  background-color: white !important;
+  border-color: white;
+  color: black !important;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.rectangular-button--red:hover * {
+  color: black !important;
+}
+
+.rectangular-button--white {
+  background-color: white;
+  border-color: white;
+  color: black !important;
+  box-shadow: 
+    0 4px 8px rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.rectangular-button--white:hover {
+  background-color: #E5042F !important;
+  border-color: #E5042F;
+  color: white !important;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.rectangular-button--white:hover * {
+  color: white !important;
+}
+
+/* Active states for proper text color inheritance */
+.rectangular-button--red.active,
+.rectangular-button--red:active,
+.rectangular-button--red[data-state="selected"] {
+  background-color: white !important;
+  color: black !important;
+}
+
+.rectangular-button--red.active *,
+.rectangular-button--red:active *,
+.rectangular-button--red[data-state="selected"] * {
+  color: black !important;
+}
+
+.rectangular-button--white.active,
+.rectangular-button--white:active,
+.rectangular-button--white[data-state="selected"] {
+  background-color: #E5042F !important;
+  color: white !important;
+}
+
+.rectangular-button--white.active *,
+.rectangular-button--white:active *,
+.rectangular-button--white[data-state="selected"] * {
+  color: white !important;
+}
+
+/* Focus states for accessibility */
+.rectangular-button--red:focus-visible {
+  background-color: white !important;
+  color: black !important;
+  outline: 2px solid #E5042F;
+  outline-offset: 2px;
+}
+
+.rectangular-button--red:focus-visible * {
+  color: black !important;
+}
+
+.rectangular-button--white:focus-visible {
+  background-color: #E5042F !important;
+  color: white !important;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.rectangular-button--white:focus-visible * {
+  color: white !important;
+}
+
+/* Additional state combinations to ensure text visibility */
+.rectangular-button[style*="background-color: white"],
+.rectangular-button[style*="background-color:white"],
+.rectangular-button[style*="background: white"],
+.rectangular-button[style*="background:white"] {
+  color: black !important;
+}
+
+.rectangular-button[style*="background-color: white"] *,
+.rectangular-button[style*="background-color:white"] *,
+.rectangular-button[style*="background: white"] *,
+.rectangular-button[style*="background:white"] * {
+  color: black !important;
+}
+
+.rectangular-button[style*="background-color: #E5042F"],
+.rectangular-button[style*="background-color:#E5042F"],
+.rectangular-button[style*="background: #E5042F"],
+.rectangular-button[style*="background:#E5042F"] {
+  color: white !important;
+}
+
+.rectangular-button[style*="background-color: #E5042F"] *,
+.rectangular-button[style*="background-color:#E5042F"] *,
+.rectangular-button[style*="background: #E5042F"] *,
+.rectangular-button[style*="background:#E5042F"] * {
+  color: white !important;
+}
+
+/* For dynamically styled buttons that might override colors */
+.rectangular-button.text-white-override {
+  color: white !important;
+}
+
+.rectangular-button.text-white-override * {
+  color: white !important;
+}
+
+.rectangular-button.text-black-override {
+  color: black !important;
+}
+
+.rectangular-button.text-black-override * {
+  color: black !important;
+}
+
+/* Specific fix for white background buttons with text visibility issues */
+button:hover[style*="background: white"],
+button:hover[style*="background-color: white"],
+button.hover\:bg-white:hover,
+button[class*="hover:bg-white"]:hover {
+  color: black !important;
+}
+
+button:hover[style*="background: white"] *,
+button:hover[style*="background-color: white"] *,
+button.hover\:bg-white:hover *,
+button[class*="hover:bg-white"]:hover * {
+  color: black !important;
+}
+
+/* Additional specificity for team page buttons */
+.group:hover button[class*="hover:bg-white"] {
+  color: black !important;
+}
+
+.group:hover button[class*="hover:bg-white"] * {
+  color: black !important;
+}
+
+button[class*="hover:bg-white"]:hover span {
+  color: black !important;
+}
+
+button[class*="hover:bg-white"]:hover svg {
+  color: black !important;
+}
+
+/* Explicit fix for core team member cards */
+.group:hover .group\/button:hover,
+.group:hover .group\/button:hover *,
+.group\/button:hover,
+.group\/button:hover *,
+button[class*="hover:bg-white"]:hover span[class*="group-hover/button:text-black"],
+button[class*="hover:bg-white"]:hover svg[class*="group-hover/button:text-black"] {
+  color: black !important;
+}
+
+/* Force black text on white background buttons */
+button:hover[class*="hover:bg-white"] {
+  background-color: white !important;
+  color: black !important;
+}
+
+button:hover[class*="hover:bg-white"] * {
+  color: black !important;
+}
+
+/* Media query safe text colors */
+@media (prefers-color-scheme: dark) {
+  .rectangular-button--red:hover,
+  .rectangular-button--red.active,
+  .rectangular-button--red:active,
+  .rectangular-button--red[data-state="selected"] {
+    color: black !important;
+  }
+  
+  .rectangular-button--red:hover *,
+  .rectangular-button--red.active *,
+  .rectangular-button--red:active *,
+  .rectangular-button--red[data-state="selected"] * {
+    color: black !important;
+  }
+}
+
+/* Remove glow effects - replaced with HUD borders */
+
+/* Enhanced 3D Button Effects */
+.rectangular-button:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.rectangular-button:active::before {
+  transform: scale(0.98) translateY(-1px);
+  opacity: 0.3;
+}
+
+/* HUD Border System - Using CSS Grid approach */
+.rectangular-button {
+  position: relative;
+  isolation: isolate;
+}
+
+/* HUD Corner Brackets using pseudo-elements */
+.rectangular-button::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: 
+    /* Top-left corner */
+    linear-gradient(to right, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    linear-gradient(to bottom, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    /* Top-right corner */
+    linear-gradient(to left, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    linear-gradient(to bottom, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    /* Bottom-left corner */
+    linear-gradient(to right, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    linear-gradient(to top, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    /* Bottom-right corner */
+    linear-gradient(to left, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%),
+    linear-gradient(to top, #E5042F 0%, #E5042F 20px, transparent 20px, transparent 100%);
+  background-size: 
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px;
+  background-position: 
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* HUD Scanning Line disabled */
+.rectangular-button::after {
+  display: none;
+}
+
+/* Hover States */
+.rectangular-button:hover::before,
+.rectangular-button:focus::before,
+.rectangular-button.active::before {
+  opacity: 1;
+  animation: hudBracketExpand 0.5s ease-out forwards;
+}
+
+.rectangular-button:hover::after,
+.rectangular-button:focus::after,
+.rectangular-button.active::after {
+  display: none;
+}
+
+/* HUD Bracket Expansion Animation */
+@keyframes hudBracketExpand {
+  0% {
+    background-size: 
+      8px 1px, 1px 8px,
+      8px 1px, 1px 8px,
+      8px 1px, 1px 8px,
+      8px 1px, 1px 8px;
+    filter: brightness(0.7);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    background-size: 
+      26px 2px, 2px 26px,
+      26px 2px, 2px 26px,
+      26px 2px, 2px 26px,
+      26px 2px, 2px 26px;
+    filter: brightness(1);
+  }
+}
+
+/* HUD Scanning Line Animation */
+@keyframes hudScanLine {
+  0% { 
+    background-position: -100% 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% { 
+    background-position: 200% 0;
+    opacity: 0;
+  }
+}
+
+/* Focus States */
+.rectangular-button:focus,
+.rectangular-button:focus-visible {
+  outline: none;
+}
+
+.rectangular-button:focus::before {
+  animation: hudBracketExpand 0.5s ease-out forwards, hudBracketPulse 1.5s ease-in-out infinite 0.5s;
+}
+
+@keyframes hudBracketPulse {
+  0%, 100% { 
+    filter: brightness(1);
+  }
+  50% { 
+    filter: brightness(1.4);
+  }
+}
+
+/* HUD Button Container Animations */
+.hud-button-container:hover .hud-corners > div,
+.hud-button-container:focus-within .hud-corners > div,
+.hud-button-container.active .hud-corners > div {
+  opacity: 1 !important;
+}
+
+.hud-button-container:hover .hud-corners > div > div,
+.hud-button-container:focus-within .hud-corners > div > div,
+.hud-button-container.active .hud-corners > div > div {
+  transform: scale(1) !important;
+}
+
+.hud-button-container:hover .scanning-line,
+.hud-button-container:focus-within .scanning-line,
+.hud-button-container.active .scanning-line {
+  opacity: 1;
+}
+
+.hud-button-container:hover .scanning-line > div,
+.hud-button-container:focus-within .scanning-line > div,
+.hud-button-container.active .scanning-line > div {
+  animation: hudScanHorizontal 2s ease-in-out infinite;
+}
+
+@keyframes hudScanHorizontal {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+:root {
+  /* Base Design System */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #171717;
+  --popover-foreground: #ffffff;
+  --primary: #E5042F;
+  --primary-foreground: #ffffff;
+  --secondary: #171717;
+  --secondary-foreground: #ffffff;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --accent: #171717;
+  --accent-foreground: #ffffff;
+  --destructive: #E5042F;
+  --destructive-foreground: #ffffff;
+  --border: #171717;
+  --input: #171717;
+  --ring: #E5042F;
+  --radius: 0.5rem;
+
+  /* Brand Colors */
+  --brand-red: #E5042F;
+  --brand-red-dark: #a5031f;
+  --brand-red-light: #ff1744;
+  --brand-red-glow: rgba(229, 4, 47, 0.6);
+  --brand-red-shadow: rgba(229, 4, 47, 0.3);
+  
+  /* Background Colors */
+  --bg-primary: #000000;
+  --bg-secondary: #171717;
+  --bg-card: #1a1a1a;
+  --bg-glass: rgba(23, 23, 23, 0.8);
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #6b7280;
+  --text-accent: #E5042F;
+  
+  /* Additional text utilities */
+  --text-white: #ffffff;
+  --text-gray-300: #d1d5db;
+  --text-gray-400: #9ca3af;
+  
+  /* Border Colors */
+  --border-default: #171717;
+  --border-accent: rgba(229, 4, 47, 0.3);
+  --border-accent-hover: rgba(229, 4, 47, 0.6);
+  --border-glass: rgba(229, 4, 47, 0.2);
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-4xl: 5rem;     /* 80px */
+  --space-5xl: 6rem;     /* 96px */
+  
+  /* Section Spacing */
+  --section-sm: 2rem;    /* 32px */
+  --section-md: 3rem;    /* 48px */
+  --section-lg: 4rem;    /* 64px */
+  --section-xl: 5rem;    /* 80px */
+  --section-2xl: 6rem;   /* 96px */
+  
+  /* Typography Scale */
+  --text-display-xl: 5rem;      /* 80px */
+  --text-display-lg: 4rem;      /* 64px */
+  --text-display-md: 3rem;      /* 48px */
+  --text-display-sm: 2.5rem;    /* 40px */
+  --text-h1: 2.25rem;           /* 36px */
+  --text-h2: 1.875rem;          /* 30px */
+  --text-h3: 1.5rem;            /* 24px */
+  --text-h4: 1.25rem;           /* 20px */
+  --text-body-xl: 1.25rem;      /* 20px */
+  --text-body-lg: 1.125rem;     /* 18px */
+  --text-body-md: 1rem;         /* 16px */
+  --text-body-sm: 0.875rem;     /* 14px */
+  --text-body-xs: 0.75rem;      /* 12px */
+  --text-gaming-stat: 3rem;     /* 48px */
+  --text-gaming-counter: 2rem;  /* 32px */
+  
+  /* Font Families */
+  --font-primary: 'Jost', sans-serif;
+  --font-heading: 'Orbitron', monospace;
+  --font-mono: 'Space Grotesk', sans-serif;
+}
+
+/* Dark Theme 1 - Cyber Red (Default) */
+.theme-dark-blue {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #E5042F;
+  --neon-primary: #E5042F;
+  --accent-glow: rgba(229, 4, 47, 0.4);
+  --glass-bg: rgba(23, 23, 23, 0.8);
+}
+
+/* Dark Theme 2 - Dark Red Cyber */
+.theme-dark-purple {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #E5042F;
+  --neon-primary: #E5042F;
+  --accent-glow: rgba(229, 4, 47, 0.5);
+  --glass-bg: rgba(23, 23, 23, 0.9);
+}
+
+/* Dark Theme 3 - Blood Red Gaming */
+.theme-dark-pink {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #E5042F;
+  --neon-primary: #E5042F;
+  --accent-glow: rgba(229, 4, 47, 0.6);
+  --glass-bg: rgba(23, 23, 23, 0.7);
+}
+
+/* Light Theme - Neumorphic Design with Black Cards */
+.theme-light {
+  /* Base Design System - Neumorphic Light */
+  --background: #f0f0f0;
+  --foreground: #1a1a1a;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #E5042F;
+  --primary-foreground: #ffffff;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #ffffff;
+  --muted: #3a3a3a;
+  --muted-foreground: #cccccc;
+  --accent: #E5042F;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #2a2a2a;
+  --ring: #E5042F;
+
+  /* Brand Colors - Enhanced for Light Mode */
+  --brand-red: #E5042F;
+  --brand-red-dark: #a5031f;
+  --brand-red-light: #ff1744;
+  --brand-red-glow: rgba(229, 4, 47, 0.4);
+  --brand-red-shadow: rgba(229, 4, 47, 0.3);
+  
+  /* Neumorphic Background Colors */
+  --bg-primary: #f0f0f0;
+  --bg-secondary: #e8e8e8;
+  --bg-tertiary: #e0e0e0;
+  --bg-card: #1a1a1a;
+  --bg-card-secondary: #2a2a2a;
+  --bg-card-accent: #E5042F;
+  --bg-surface: #f5f5f5;
+  
+  /* Neumorphic Text Colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #2a2a2a;
+  --text-muted: #4a4a4a;
+  --text-on-card: #ffffff;
+  --text-on-card-secondary: #cccccc;
+  --text-on-card-muted: #999999;
+  --text-accent: #E5042F;
+  --text-heading: #1a1a1a;
+  --text-body: #2a2a2a;
+  
+  /* Neumorphic Shadows and Effects */
+  --shadow-light: #ffffff;
+  --shadow-dark: #d1d1d1;
+  --shadow-darker: #c0c0c0;
+  --neumorphic-raised: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  --neumorphic-inset: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+  --neumorphic-pressed: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  --neumorphic-soft: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  
+  /* Border Colors for Neumorphic Design */
+  --border-default: #d0d0d0;
+  --border-card: #333333;
+  --border-accent: #E5042F;
+  --border-accent-hover: #ff1744;
+  
+  /* Gaming specific neumorphic colors */
+  --neon-primary: #E5042F;
+  --accent-glow: rgba(229, 4, 47, 0.4);
+}
+
+/* Light Theme Utility Classes - Neumorphic */
+.theme-light {
+  color-scheme: light;
+}
+
+.theme-light body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Neumorphic Card Backgrounds */
+.theme-light .bg-black {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-gray-950 {
+  background-color: var(--bg-card-secondary) !important;
+}
+
+.theme-light .bg-black\/30 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-black\/40 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-black\/50 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-black\/80 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-black\/90 {
+  background-color: var(--bg-card) !important;
+}
+
+.theme-light .bg-black\/95 {
+  background-color: var(--bg-card) !important;
+}
+
+/* Text Colors for Black Cards */
+.theme-light .text-white {
+  color: var(--text-on-card) !important;
+}
+
+.theme-light .text-gray-300 {
+  color: var(--text-on-card-secondary) !important;
+}
+
+.theme-light .text-gray-400 {
+  color: var(--text-on-card-muted) !important;
+}
+
+/* Comprehensive text overrides for light theme */
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light h5,
+.theme-light h6 {
+  color: #1a1a1a !important;
+}
+
+.theme-light p,
+.theme-light span,
+.theme-light div,
+.theme-light a,
+.theme-light li,
+.theme-light td,
+.theme-light th,
+.theme-light label {
+  color: #1a1a1a !important;
+}
+
+/* Force black text on all text elements in light theme */
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light .text-gray-300,
+.theme-light .text-gray-400,
+.theme-light .text-gray-500,
+.theme-light .text-gray-600,
+.theme-light .text-gray-700,
+.theme-light .text-gray-800,
+.theme-light .text-gray-900 {
+  color: #1a1a1a !important;
+}
+
+.theme-light .text-white,
+.theme-light .text-slate-100,
+.theme-light .text-slate-200,
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 {
+  color: #1a1a1a !important;
+}
+
+/* Specific overrides for common text patterns */
+.theme-light [class*="text-gray"],
+.theme-light [class*="text-white"],
+.theme-light [class*="text-slate"] {
+  color: #1a1a1a !important;
+}
+
+/* Exception: Keep white text on black/dark cards */
+.theme-light .neumorphic-card *,
+.theme-light .bg-black *,
+.theme-light .bg-gray-950 *,
+.theme-light .bg-black\/90 *,
+.theme-light .bg-black\/95 *,
+.theme-light [class*="bg-black"] * {
+  color: #ffffff !important;
+}
+
+.theme-light .neumorphic-card .text-gray-300,
+.theme-light .neumorphic-card .text-gray-400,
+.theme-light .bg-black .text-gray-300,
+.theme-light .bg-black .text-gray-400 {
+  color: #cccccc !important;
+}
+
+/* Red accent text should remain red */
+.theme-light .text-red-500,
+.theme-light [class*="text-red"] {
+  color: #E5042F !important;
+}
+
+
+
+/* Button text visibility fixes */
+.theme-light .rectangular-button--red {
+  background-color: #E5042F !important;
+  color: #ffffff !important;
+}
+
+.theme-light .rectangular-button--white {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+
+
+/* Comprehensive light theme text visibility fixes */
+.theme-light {
+  --text-primary: #1a1a1a;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+}
+
+/* Fix all invisible text colors on light backgrounds - comprehensive approach */
+.theme-light .text-white,
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light .text-gray-300,
+.theme-light .text-gray-400,
+.theme-light .text-slate-100,
+.theme-light .text-slate-200,
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 {
+  color: #1a1a1a !important;
+}
+
+/* Maintain white text only on dark cards */
+.theme-light .bg-black .text-white,
+.theme-light .bg-black .text-gray-100,
+.theme-light .bg-black .text-gray-200,
+.theme-light .bg-black .text-gray-300,
+.theme-light .bg-black .text-gray-400,
+.theme-light .bg-gray-900 .text-white,
+.theme-light .bg-gray-900 .text-gray-100,
+.theme-light .bg-gray-900 .text-gray-200,
+.theme-light .bg-gray-900 .text-gray-300,
+.theme-light .bg-gray-900 .text-gray-400,
+.theme-light .bg-gray-950 .text-white,
+.theme-light .bg-gray-950 .text-gray-100,
+.theme-light .bg-gray-950 .text-gray-200,
+.theme-light .bg-gray-950 .text-gray-300,
+.theme-light .bg-gray-950 .text-gray-400,
+.theme-light .neumorphic-card .text-white,
+.theme-light .neumorphic-card .text-gray-100,
+.theme-light .neumorphic-card .text-gray-200,
+.theme-light .neumorphic-card .text-gray-300,
+.theme-light .neumorphic-card .text-gray-400 {
+  color: #ffffff !important;
+}
+
+/* Secondary text on dark cards */
+.theme-light .bg-black .text-gray-300,
+.theme-light .bg-black .text-gray-400,
+.theme-light .bg-gray-900 .text-gray-300,
+.theme-light .bg-gray-900 .text-gray-400,
+.theme-light .bg-gray-950 .text-gray-300,
+.theme-light .bg-gray-950 .text-gray-400,
+.theme-light .neumorphic-card .text-gray-300,
+.theme-light .neumorphic-card .text-gray-400 {
+  color: #cccccc !important;
+}
+
+/* Remove problematic universal overrides and use targeted fixes */
+
+/* Exception: Keep white text only on dark backgrounds */
+.theme-light .bg-black,
+.theme-light .bg-black *,
+.theme-light .bg-gray-900,
+.theme-light .bg-gray-900 *,
+.theme-light .bg-gray-950,
+.theme-light .bg-gray-950 *,
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900 *,
+.theme-light .bg-slate-950,
+.theme-light .bg-slate-950 *,
+.theme-light .neumorphic-card,
+.theme-light .neumorphic-card * {
+  color: #ffffff !important;
+}
+
+/* Dark card secondary text */
+.theme-light .bg-black .text-gray-300,
+.theme-light .bg-gray-900 .text-gray-300,
+.theme-light .bg-gray-950 .text-gray-300,
+.theme-light .neumorphic-card .text-gray-300,
+.theme-light .bg-black .text-gray-400,
+.theme-light .bg-gray-900 .text-gray-400,
+.theme-light .bg-gray-950 .text-gray-400,
+.theme-light .neumorphic-card .text-gray-400 {
+  color: #cccccc !important;
+}
+
+/* Keep red accent colors */
+.theme-light .text-red-500,
+.theme-light .text-red-600 {
+  color: #E5042F !important;
+}
+
+.theme-light [class*="text-red"] {
+  color: #E5042F !important;
+}
+
+/* Red buttons keep white text */
+.theme-light .bg-red-500 *,
+.theme-light .bg-red-600 * {
+  color: #ffffff !important;
+}
+
+.theme-light [style*="background-color: #E5042F"] *,
+.theme-light [style*="background: #E5042F"] * {
+  color: #ffffff !important;
+}
+
+.theme-light .border-white\/20 {
+  border-color: var(--border-default) !important;
+}
+
+/* Proper light theme text handling - only affect light backgrounds */
+.theme-light {
+  /* Default body text should be black */
+}
+
+.theme-light body,
+.theme-light .page-container,
+.theme-light main:not(.bg-black):not(.bg-gray-900):not(.bg-gray-950) {
+  color: #1a1a1a !important;
+}
+
+/* Light background text should be black - be specific about what constitutes light backgrounds */
+.theme-light .bg-white,
+.theme-light .bg-white *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *),
+.theme-light .bg-gray-50,
+.theme-light .bg-gray-50 *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *),
+.theme-light .bg-gray-100,
+.theme-light .bg-gray-100 *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *),
+.theme-light .bg-gray-200,
+.theme-light .bg-gray-200 *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *),
+.theme-light .bg-slate-50,
+.theme-light .bg-slate-50 *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *),
+.theme-light .bg-slate-100,
+.theme-light .bg-slate-100 *:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *) {
+  color: #1a1a1a !important;
+}
+
+/* Dark backgrounds should keep white text */
+.theme-light .bg-black,
+.theme-light .bg-black *,
+.theme-light .bg-gray-900,
+.theme-light .bg-gray-900 *,
+.theme-light .bg-gray-950,
+.theme-light .bg-gray-950 *,
+.theme-light .bg-gray-800,
+.theme-light .bg-gray-800 *,
+.theme-light [class*="bg-black"],
+.theme-light [class*="bg-black"] * {
+  color: #ffffff !important;
+}
+
+/* Red buttons and elements */
+.theme-light .bg-red-500,
+.theme-light .bg-red-500 *,
+.theme-light .bg-red-600,
+.theme-light .bg-red-600 *,
+.theme-light [style*="background-color: #E5042F"],
+.theme-light [style*="background-color: #E5042F"] *,
+.theme-light [style*="background: #E5042F"],
+.theme-light [style*="background: #E5042F"] * {
+  color: #ffffff !important;
+}
+
+/* Red text should remain red */
+.theme-light .text-red-500,
+.theme-light .text-red-600,
+.theme-light [class*="text-red"]:not(.bg-black *):not(.bg-gray-900 *):not(.bg-gray-950 *) {
+  color: #E5042F !important;
+}
+
+.theme-light .border-white\/30 {
+  border-color: var(--border-accent) !important;
+}
+
+.theme-light .border-white\/50 {
+  border-color: var(--border-accent-hover) !important;
+}
+
+/* Light theme background adjustments */
+.theme-light .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary)) !important;
+}
+
+/* Light theme HUD elements */
+.theme-light .rectangular-button--red {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.theme-light .rectangular-button--red:hover {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--primary);
+}
+
+.theme-light .rectangular-button--white {
+  background-color: var(--bg-primary);
+  border-color: var(--border-default);
+  color: var(--text-primary) !important;
+}
+
+.theme-light .rectangular-button--white:hover {
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+/* Navigation adjustments for light theme */
+.theme-light .backdrop-blur-xl {
+  background-color: var(--bg-glass) !important;
+}
+
+/* Ensure proper contrast in light mode */
+.theme-light .opacity-0 {
+  opacity: 0 !important;
+}
+
+.theme-light .opacity-100 {
+  opacity: 1 !important;
+}
+
+/* Neumorphic Card Components for Light Theme */
+.theme-light .neumorphic-card {
+  background: var(--bg-card);
+  color: var(--text-on-card);
+  box-shadow: var(--neumorphic-raised);
+  border: 1px solid var(--border-card);
+}
+
+.theme-light .neumorphic-card:hover {
+  box-shadow: var(--neumorphic-soft);
+  transform: translateY(-2px);
+}
+
+.theme-light .neumorphic-inset {
+  box-shadow: var(--neumorphic-inset);
+}
+
+.theme-light .neumorphic-pressed {
+  box-shadow: var(--neumorphic-pressed);
+}
+
+/* Override gradient backgrounds for light theme */
+.theme-light .bg-gradient-to-br {
+  background: var(--bg-primary) !important;
+}
+
+.theme-light .bg-gradient-to-b {
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary)) !important;
+}
+
+/* Backdrop blur adjustments for neumorphic design */
+.theme-light .backdrop-blur-xl {
+  background-color: var(--bg-card) !important;
+  backdrop-filter: none !important;
+}
+
+/* Navigation and controls for light theme */
+.theme-light .bg-white {
+  background-color: var(--bg-card) !important;
+  color: var(--text-on-card) !important;
+}
+
+.theme-light .text-black {
+  color: var(--text-on-card) !important;
+}
+
+.theme-light .border-gray-300\/50 {
+  border-color: var(--border-card) !important;
+}
+
+.theme-light .border-gray-700\/50 {
+  border-color: var(--border-card) !important;
+}
+
+/* Light Theme 2 - Professional */
+.theme-light-pro {
+  --background: #fefefe;
+  --foreground: #2d3748;
+  --card: #ffffff;
+  --card-foreground: #2d3748;
+  --primary: #3182ce;
+  --neon-primary: #3182ce;
+  --accent-glow: rgba(49, 130, 206, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --border: #e2e8f0;
+  --secondary: #f7fafc;
+  --muted: #edf2f7;
+  --muted-foreground: #718096;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: var(--font-primary);
+    background: var(--bg-primary);
+  }
+
+  /* Global Typography Classes */
+  .font-primary { font-family: var(--font-primary); }
+  .font-heading { font-family: var(--font-heading); }
+  .font-mono { font-family: var(--font-mono); }
+  
+  /* Legacy support */
+  .font-space { font-family: var(--font-mono); }
+  .font-orbitron { font-family: var(--font-heading); }
+  
+  /* Standardized Typography Scale */
+  .gt-display-xl { font-size: var(--text-display-xl); font-family: var(--font-heading); font-weight: 700; line-height: 1.1; }
+  .gt-display-lg { font-size: var(--text-display-lg); font-family: var(--font-heading); font-weight: 700; line-height: 1.1; }
+  .gt-display-md { font-size: var(--text-display-md); font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+  .gt-display-sm { font-size: var(--text-display-sm); font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+  
+  .gt-heading-1 { font-size: var(--text-h1); font-family: var(--font-heading); font-weight: 600; line-height: 1.25; }
+  .gt-heading-2 { font-size: var(--text-h2); font-family: var(--font-heading); font-weight: 600; line-height: 1.3; }
+  .gt-heading-3 { font-size: var(--text-h3); font-family: var(--font-heading); font-weight: 500; line-height: 1.4; }
+  .gt-heading-4 { font-size: var(--text-h4); font-family: var(--font-heading); font-weight: 500; line-height: 1.4; }
+  
+  .gt-body-xl { font-size: var(--text-body-xl); font-family: var(--font-primary); font-weight: 400; line-height: 1.6; }
+  .gt-body-lg { font-size: var(--text-body-lg); font-family: var(--font-primary); font-weight: 400; line-height: 1.6; }
+  .gt-body-md { font-size: var(--text-body-md); font-family: var(--font-primary); font-weight: 400; line-height: 1.5; }
+  .gt-body-sm { font-size: var(--text-body-sm); font-family: var(--font-primary); font-weight: 400; line-height: 1.5; }
+  .gt-body-xs { font-size: var(--text-body-xs); font-family: var(--font-primary); font-weight: 400; line-height: 1.4; }
+  
+  .gt-gaming-stat { font-size: var(--text-gaming-stat); font-family: var(--font-heading); font-weight: 700; line-height: 1.1; }
+  .gt-gaming-counter { font-size: var(--text-gaming-counter); font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+  .gt-gaming-label { font-size: var(--text-body-xs); font-family: var(--font-primary); font-weight: 500; line-height: 1.3; }
+  
+  /* Legacy typography support */
+  .text-display-xl { @apply gt-display-xl; }
+  .text-display-lg { @apply gt-display-lg; }
+  .text-h1 { @apply gt-heading-1; }
+  .text-h2 { @apply gt-heading-2; }
+  .text-body-xl { @apply gt-body-xl; }
+  .text-body-lg { @apply gt-body-lg; }
+  .text-gaming-stat { @apply gt-gaming-stat; }
+  .text-gaming-label { @apply gt-gaming-label; }
+}
+
+@layer components {
+  /* Global Layout Classes */
+  .page-container {
+    @apply min-h-screen relative overflow-hidden;
+    background: var(--bg-primary);
+  }
+  
+  .page-background {
+    @apply absolute inset-0 z-[-1];
+    background: linear-gradient(45deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  .page-background::before {
+    content: '';
+    @apply absolute inset-0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, var(--brand-red-glow) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(229, 4, 47, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(229, 4, 47, 0.05) 0%, transparent 50%);
+  }
+  
+  .page-background::after {
+    content: '';
+    @apply absolute inset-0;
+    background: var(--bg-overlay);
+  }
+  
+  .content-container {
+    @apply relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+  
+  .section-spacing-sm { padding: var(--section-sm) 0; }
+  .section-spacing-md { padding: var(--section-md) 0; }
+  .section-spacing-lg { padding: var(--section-lg) 0; }
+  .section-spacing-xl { padding: var(--section-xl) 0; }
+  .section-spacing-2xl { padding: var(--section-2xl) 0; }
+  
+  /* Color Utility Classes */
+  .text-brand { color: var(--brand-red) !important; }
+  .text-brand-light { color: var(--brand-red-light) !important; }
+  .text-primary { color: var(--text-primary) !important; }
+  .text-secondary { color: var(--text-secondary) !important; }
+  .text-muted { color: var(--text-muted) !important; }
+  .text-white { color: var(--text-white) !important; }
+  .text-gray-300 { color: var(--text-gray-300) !important; }
+  .text-gray-400 { color: var(--text-gray-400) !important; }
+  
+  /* Force proper text colors on specific elements */
+  .about-page h1,
+  .about-page h2,
+  .about-page h3,
+  .about-page h4,
+  .about-page h5,
+  .about-page h6 {
+    color: var(--text-primary) !important;
+  }
+  
+  .about-page p {
+    color: var(--text-secondary) !important;
+  }
+  
+  .about-page .text-primary {
+    color: var(--text-primary) !important;
+  }
+  
+  .about-page .text-secondary {
+    color: var(--text-secondary) !important;
+  }
+  
+  .bg-brand { background-color: var(--brand-red); }
+  .bg-brand-dark { background-color: var(--brand-red-dark); }
+  .bg-card { background-color: var(--bg-card); }
+  .bg-glass { background: var(--bg-glass); }
+  
+  .border-brand { border-color: var(--brand-red); }
+  .border-accent { border-color: var(--border-accent); }
+  .border-accent-hover { border-color: var(--border-accent-hover); }
+
+  /* Animated Background (legacy support) */
+  .animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  .animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(229, 4, 47, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(229, 4, 47, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(229, 4, 47, 0.05) 0%, transparent 50%);
+  }
+
+  /* Cyberpunk Glass Card */
+  .glass-card {
+    @apply backdrop-blur-md border rounded-xl transition-all duration-300;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(229, 4, 47, 0.1),
+      0 0 20px rgba(229, 4, 47, 0.1);
+    transform-style: preserve-3d;
+  }
+
+  .glass-card:hover {
+    border-color: rgba(229, 4, 47, 0.4);
+    box-shadow: 
+      0 15px 40px rgba(0, 0, 0, 0.6),
+      inset 0 2px 5px rgba(229, 4, 47, 0.2),
+      0 0 30px rgba(229, 4, 47, 0.3);
+    transform: translateY(-5px) rotateX(2deg);
+  }
+
+  /* HUD Components */
+  .hud-box {
+    background: linear-gradient(135deg, rgba(23, 23, 23, 0.9), rgba(0, 0, 0, 0.8));
+    border: 1px solid rgba(229, 4, 47, 0.3);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .hud-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E5042F, transparent);
+    opacity: 0.6;
+  }
+
+  .hud-box::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 6px;
+    height: 6px;
+    background: #E5042F;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #E5042F;
+  }
+
+  .hud-box:hover {
+    border-color: rgba(229, 4, 47, 0.6);
+    background: linear-gradient(135deg, rgba(23, 23, 23, 0.95), rgba(229, 4, 47, 0.05));
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.6),
+      0 0 20px rgba(229, 4, 47, 0.3),
+      inset 0 1px 0 rgba(229, 4, 47, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .hud-icon {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba(229, 4, 47, 0.3));
+  }
+
+  .hud-box:hover .hud-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(229, 4, 47, 0.6));
+  }
+
+  .hud-button {
+    background: linear-gradient(135deg, rgba(23, 23, 23, 0.9), rgba(0, 0, 0, 0.8));
+    border: 1px solid rgba(229, 4, 47, 0.4);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  .hud-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(229, 4, 47, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .hud-button:hover::before {
+    left: 100%;
+  }
+
+  .hud-button:hover {
+    border-color: rgba(229, 4, 47, 0.8);
+    background: linear-gradient(135deg, rgba(229, 4, 47, 0.2), rgba(23, 23, 23, 0.9));
+    box-shadow: 0 0 20px rgba(229, 4, 47, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Cyberpunk HUD Elements */
+  .hud-panel {
+    @apply relative;
+    background: linear-gradient(135deg, rgba(23, 23, 23, 0.9), rgba(0, 0, 0, 0.8));
+    border: 1px solid rgba(229, 4, 47, 0.3);
+    box-shadow: 
+      0 0 20px rgba(229, 4, 47, 0.2),
+      inset 0 1px 0 rgba(229, 4, 47, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hud-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #E5042F, transparent);
+    animation: hudScan 3s ease-in-out infinite;
+  }
+
+  .hud-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: #E5042F;
+    box-shadow: 0 0 6px #E5042F;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+
+  .cyber-icon {
+    @apply relative transition-all duration-300 cursor-pointer;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 0 8px rgba(229, 4, 47, 0.3));
+  }
+
+  .cyber-icon:hover {
+    transform: translateY(-2px) rotateX(10deg) scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(229, 4, 47, 0.6));
+  }
+
+  .cyber-icon:active {
+    transform: translateY(1px) rotateX(-5deg) scale(0.95);
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 cursor-pointer;
+    transform-style: preserve-3d;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-3;
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(0, 212, 255, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-12px) rotateX(2deg);
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 cursor-pointer;
+    position: relative;
+  }
+
+  .hover-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+  }
+
+  .hover-glow:hover::before {
+    opacity: 1;
+  }
+
+  .hover-glow:hover {
+    @apply transform scale-105;
+    filter: brightness(1.3) saturate(1.2);
+    box-shadow: 
+      0 0 40px rgba(0, 212, 255, 0.5),
+      0 0 80px rgba(0, 212, 255, 0.3),
+      0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Card Interactions */
+  .interactive-card {
+    @apply transition-all duration-300 cursor-pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .interactive-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .interactive-card:hover::after {
+    left: 100%;
+  }
+
+  .interactive-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(0, 212, 255, 0.2);
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .floating-delay {
+    animation: floating 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .floating-slow {
+    animation: floating 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Pulse Animation */
+  .pulse-neon {
+    animation: pulseNeon 2s ease-in-out infinite;
+  }
+
+  /* 3D Card */
+  .card-3d {
+    @apply transform-gpu transition-all duration-300;
+    transform-style: preserve-3d;
+  }
+
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+  }
+
+  /* Particle Effect */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--neon-blue);
+    border-radius: 50%;
+    animation: particleFloat 20s linear infinite;
+    opacity: 0.6;
+  }
+
+  /* Navigation */
+  .nav-glass {
+    @apply backdrop-blur-md border-b border-white/10;
+    background: rgba(10, 10, 10, 0.8);
+  }
+
+  /* Cyberpunk 3D Button Styles */
+  .btn-cyberpunk {
+    @apply relative px-8 py-3 bg-transparent border-2 font-semibold rounded-lg overflow-hidden transition-all duration-300;
+    border-color: #E5042F;
+    color: #E5042F;
+    background: linear-gradient(145deg, #171717, #000000);
+    box-shadow: 
+      0 8px 15px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(229, 4, 47, 0.2),
+      0 0 20px rgba(229, 4, 47, 0.3);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .btn-cyberpunk::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-all duration-300;
+    background: linear-gradient(145deg, #E5042F, #a5031f);
+    border-radius: inherit;
+  }
+
+  .btn-cyberpunk::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(229, 4, 47, 0.1), rgba(0, 0, 0, 0.3));
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .btn-cyberpunk:hover::before {
+    @apply opacity-90;
+  }
+
+  .btn-cyberpunk:hover {
+    @apply text-white;
+    transform: translateY(-2px) translateZ(20px) rotateX(3deg);
+    box-shadow: 
+      0 15px 30px rgba(0, 0, 0, 0.6),
+      inset 0 2px 5px rgba(229, 4, 47, 0.4),
+      0 0 40px rgba(229, 4, 47, 0.6),
+      0 0 80px rgba(229, 4, 47, 0.3);
+  }
+
+  .btn-cyberpunk:active {
+    transform: translateY(4px) translateZ(-10px) rotateX(-2deg);
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.8),
+      inset 0 4px 8px rgba(0, 0, 0, 0.6),
+      inset 0 -2px 0 rgba(229, 4, 47, 0.3);
+  }
+
+  .btn-cyber-solid {
+    @apply px-8 py-3 text-white font-semibold rounded-lg transition-all duration-300 relative;
+    background: linear-gradient(145deg, #E5042F, #a5031f);
+    box-shadow: 
+      0 8px 20px rgba(0, 0, 0, 0.4),
+      0 4px 15px rgba(229, 4, 47, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform-style: preserve-3d;
+  }
+
+  .btn-cyber-solid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .btn-cyber-solid:hover {
+    transform: translateY(-3px) translateZ(15px) rotateX(2deg);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.6),
+      0 8px 25px rgba(229, 4, 47, 0.5),
+      inset 0 2px 5px rgba(255, 255, 255, 0.3),
+      0 0 30px rgba(229, 4, 47, 0.4);
+  }
+
+  .btn-cyber-solid:active {
+    transform: translateY(2px) translateZ(-5px) rotateX(-1deg);
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.8),
+      inset 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Grid Pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Geometric Shapes */
+  .geometric-shape {
+    @apply absolute opacity-20;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    filter: blur(1px);
+    animation: geometricFloat 15s ease-in-out infinite;
+  }
+
+  /* Text Effects */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Loading Animation */
+  .loading-bar {
+    @apply w-full h-1 bg-gray-800 rounded-full overflow-hidden;
+  }
+
+  .loading-bar::after {
+    content: '';
+    @apply block h-full bg-neon-blue rounded-full;
+    width: 0%;
+    animation: loadingProgress 3s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  /* Keyframe Animations */
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulseNeon {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+    }
+  }
+
+  @keyframes particleFloat {
+    0% {
+      transform: translateY(100vh) translateX(0px);
+      opacity: 0;
+    }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% {
+      transform: translateY(-100px) translateX(100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes geometricFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-30px) rotate(120deg);
+    }
+    66% {
+      transform: translateY(15px) rotate(240deg);
+    }
+  }
+
+  @keyframes loadingProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+  @keyframes hudScan {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+  }
+
+  /* Smooth scrolling for horizontal elements */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(229, 4, 47, 0.6) rgba(23, 23, 23, 0.3);
+  }
+
+  .smooth-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .smooth-scroll::-webkit-scrollbar-track {
+    background: rgba(23, 23, 23, 0.3);
+    border-radius: 4px;
+  }
+
+  .smooth-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgba(229, 4, 47, 0.6), rgba(229, 4, 47, 0.8));
+    border-radius: 4px;
+    border: 1px solid rgba(229, 4, 47, 0.3);
+  }
+
+  .smooth-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, rgba(229, 4, 47, 0.8), rgba(229, 4, 47, 1));
+    box-shadow: 0 0 6px rgba(229, 4, 47, 0.5);
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Animation Utilities */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glass-card {
+    @apply mx-4;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+}
+
+/* High Performance Animations */
+@media (prefers-reduced-motion: reduce) {
+  .floating,
+  .floating-delay,
+  .floating-slow,
+  .pulse-neon,
+  .particle {
+    animation: none;
+  }
+}

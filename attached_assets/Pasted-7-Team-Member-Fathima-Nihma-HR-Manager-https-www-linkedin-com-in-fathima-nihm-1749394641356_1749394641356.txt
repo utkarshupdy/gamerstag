@@ -1,0 +1,96 @@
+7  Team Member  Fathima Nihma         HR Manager            https://www.linkedin.com/in/fathima-nihma
+8  Team Member  Mohd Amber Rizvi      Core Tech Member      https://www.linkedin.com/in/mohd-amber-rizvi-93a55a201
+9  Team Member  Shivansh Verma        Core Tech Member      https://www.linkedin.com/in/meet-shivanshverma
+10 Team Member  Ditto Johnson         Social Media Manager  https://www.linkedin.com/in/ditto-johnson-941267249
+11 Team Member  Jayandra Todawat      Developer             https://www.linkedin.com/in/jayndra-todawat
+12 Team Member  Sakshi Dhoni          Developer             https://www.linkedin.com/in/sakshidhoni
+13 Team Member  Himani Sharma         HR Manager            https://www.linkedin.com/in/himanisharma062
+14 Team Member  Suhitha Suresh        HR Manager            https://www.linkedin.com/in/suhitha1722
+15 Team Member  Rishitha Jain         HR Manager            https://www.linkedin.com/in/rishita-jain-24890b30a
+16 Team Member  Sukhmani Kaur         HR Manager            https://www.linkedin.com/in/itssukhmanikaur
+17 Team Member  Shamil Mohamed        Brand Manager         https://www.linkedin.com/in/muhammed-shamil-thottungal
+18 Team Member  Dibin Jose Vadakkan   Financial Analyst     https://www.linkedin.com/in/dibin-jose-vadakkan-69109179
+19 Team Member  Arjun Gopi K          Developer             https://www.linkedin.com/in/arjun-gopi-k-324178253
+20 Team Member  Haniya Abdul Rahman   Design Team Member    https://www.linkedin.com/in/haniya-ar
+21 Team Member  Manish Verma          Developer             (no LinkedIn provided)
+22 Team Member  Ankita Soni           Developer             https://www.linkedin.com/in/aankita-soni
+23 Team Member  Jilha Jose            App Tester            https://www.linkedin.com/in/jilha-jos/
+24 Team Member  Ardra Shashidharan    App Tester            https://www.linkedin.com/in/ardra-sasidharan-05a861211
+25 Team Member  Aiswarya Madhu        Social Media Manager  https://www.linkedin.com/in/vallathaiswarya
+26 Team Member  Gautam Krishna K      Social Media Manager  https://www.linkedin.com/in/ACoAAEQ2Et4B8sLMLpi2zRc0nwoM...
+27 Team Member  Aditya Rawat          Developer             https://www.linkedin.com/in/theadityarawat
+28 Team Member  Nithin Dhawane        Design Team Member    https://www.linkedin.com/in/nitin-dhawane-39b07515a
+29 Team Member  Kevin George          Design Team Member    https://www.linkedin.com/in/kevin-george-58b5701a1
+30 Team Member  Jeethu Singh          Esports Manager       https://www.linkedin.com/in/jeetu-singh-574665292
+31 Team Member  Indrajith Ajith       Esports Manager       (no LinkedIn provided)
+32 Team Member  Mariya Joshy          Financial Analyst     https://www.linkedin.com/in/mariya-joshy-97bba422
+33 Team Member  Abhishek S Nair       Financial Analyst     https://www.linkedin.com/in/abhishek-s-nair50
+34 Team Member  Abhinaya R            Social Media Manager  https://www.linkedin.com/in/abhinaya-ravic
+35 Team Member  Naman Sharma          Social Media Manager  https://www.linkedin.com/in/naman-sharma-682189244
+36 Team Member  Utkarsh Kumar Upadhyay Developer            https://www.linkedin.com/in/utkarsh-kumar-upadhyay-18685b24a
+37 Team Member  Dipankar Upadhyaya    Developer             https://www.linkedin.com/in/dipankar-upadhyaya-26618b238
+38 Team Member  Alen Joshy            Design Team Member    https://www.linkedin.com/in/alen-joshy-4025a41bb
+39 Team Member  Shubham Chintal       Video Editor          https://www.linkedin.com/in/shubham-chintal-254683292
+40 Team Member  Ahammed Habeebi       Design Team Member    https://www.linkedin.com/in/ahammed-habeebi-b4997021
+41 Team Member  Philip George         Brand Manager         https://www.linkedin.com/in/philip-george-408786216
+42 Team Member  Amruth                Brand Manager         https://www.linkedin.com/in/amruth-n
+43 Team Member  Sakshi Soni           Developer             https://www.linkedin.com/in/sakshidhoni
+44 Team Member  Shreyansh Khandelwal  Developer             https://www.linkedin.com/in/shreyansh-khandelwal-383718165
+45 Team Member  Vaidant Sharma        Developer             https://www.linkedin.com/in/vaidant-sharma-7435592a
+46 Team Member  Prakhar Singh         Developer             https://www.linkedin.com/in/meet-prakhar-singh
+47 Team Member  Shivam Chouhan        Developer             https://www.linkedin.com/in/shivam-chouhan
+48 Team Member  Swapnil Adsul         Developer             https://www.linkedin.com/in/swapnil-adsul-139515230
+49 Team Member  Shubh Agrawal         Developer             https://www.linkedin.com/in/shubhagarwal0704
+50 Team Member  Aman Nurmhamad Mujawar Developer            (no LinkedIn provided)
+51 Team Member  Suhani Goyal          Design Team Member    https://www.linkedin.com/in/suhanieie
+52 Team Member  Minnathullaa S        Design Team Member    https://www.linkedin.com/in/minnathullaa-s-664694242
+53 Team Member  Mukul Singh Morawat   Video Editor          https://www.linkedin.com/in/mukul-singh-morawat-1386bb255
+55 Team Member  Lavanya Talodhikar    Developer             https://www.linkedin.com/in/lawanya-talodhikar-2688942a4
+56 Team Member  Saloni Dhanotiya      Video Editor          https://www.linkedin.com/in/saloni-dhanotiya-00615125a
+57 SUPPORTERS   Tintu Tomy                                   https://www.linkedin.com/in/tintu-tomy-93655a24
+59 Team Member  Abel Antony           Financial Analyst     https://www.linkedin.com/in/abel-antony-benny
+60 Team Member  Ranjima AR            Developer             https://www.linkedin.com/in/ranjima-ar
+61 Team Member  Aman Kumar            Developer             https://www.linkedin.com/in/ACoAAEeg9S4Baj86sVm9R5LVUqfHjeMNEq0rcDA
+62 Team Member  Dumpala Pardha Saradhi Developer            https://www.linkedin.com/in/pardha-saradhi-818a93254
+63 Team Member  Shivansh Shukla       Developer             https://www.linkedin.com/in/shukla-programmer
+66 Team Member  Alen Joe Abey         Video Editor          https://www.linkedin.com/in/alen-joe-abey-50603a311
+67 Team Member  Ayush Anand           Video Editor          https://www.linkedin.com/in/ACoAAD1vndIBXzxjlwOq_5zStBEHtDcexrwtHVw
+69 Team Member  Iti Jain             HR Manager            (no LinkedIn provided)
+70 Team Member  Kartheek Chilukoti    HR Manager            https://www.linkedin.com/in/kartheek-chilukoti-038185228
+71 Team Member  Poojitha Pasham       HR Manager            https://www.linkedin.com/in/poojitha-pasham-2355652a1
+72 Team Member  Butool Zehra Jafri    HR Manager            https://www.linkedin.com/in/butoolzehra30
+73 Team Member  Mannat Malhotra       HR Manager            https://www.linkedin.com/in/mannat-malhotra-82900a216
+74 Team Member  Saanvi Rana           Content Writer        https://www.linkedin.com/in/saanvi-rana-082843256
+75 Team Member  Alina Joseph          Content Writer        https://www.linkedin.com/in/alinajoseph08
+76 Team Member  Himanshu Gupta        Developer             https://www.linkedin.com/in/himanshu-gupta-33491b1ba
+77 Team Member  Anushka Sharma        Social Media Manager  https://www.linkedin.com/in/anushkasharma2211
+78 Team Member  Jen Joy               Financial Analyst     https://www.linkedin.com/in/jentjoy
+79 Team Member  Neha Chandrasekaran   Content Writer        https://www.linkedin.com/in/neha-chandrasekaran
+80 Team Member  Arun Kumar            Video Editor          https://www.linkedin.com/in/arunkumar12533
+81 Team Member  Muhammed Shahin       Social Media Manager  https://www.linkedin.com/in/muhammed-shahin-u-52a444210
+82 Team Member  Simontika Das         Video Editor          https://www.linkedin.com/in/simontika-das-9607402a5
+83 Team Member  Snehal Mathur         Design Team Member    https://www.linkedin.com/in/snehalmathur2005
+84 Team Member  Nasrin K              Financial Analyst     https://www.linkedin.com/in/nasrin-k
+85 Team Member  Jerin Mathew          Financial Analyst     https://www.linkedin.com/in/jerin-mathew-60214a1b9
+86 Team Member  Baishali Dey Sarkar   Video Editor          https://www.linkedin.com/in/baishali-dey-sarkar-663b6232a
+88 Team Member  Sonu Dabi             Video Editor          https://www.linkedin.com/in/sonu-dabi
+89 Team Member  Zeeshan Siddiqui      Brand Manager         https://www.linkedin.com/in/zeeshan-siddiqui-a93197249
+90 Team Member  Vamsi Karthik         Design Team Member    https://www.linkedin.com/in/vamsi-karthik555
+91 Team Member  Shubham Kumar         Brand Manager         https://www.linkedin.com/in/shubham-kumar-6a4804211
+92 Team Member  Anusha Popat          Design Team Member    https://www.linkedin.com/in/anusha-popat-b199802a5
+93 Team Member  Taniya Jahagirdar     Design Team Member    https://www.linkedin.com/in/ACoAADicdL8Bpq4GiOZySaxIwzeHWMKXIQeVJvc
+94 Team Member  Ojash Gupta           Developer             https://www.linkedin.com/in/ojash-gupta-7a755b1bb
+95 Team Member  Subhiksha Prabakaran  Design Team Member    https://www.linkedin.com/in/subhiksha-prabakaran-101475135
+96 Team Member  Prakhar Jain          Developer             http://www.linkedin.com/in/peter1prakhar
+97 Team Member  Sagar Sharma          Brand Manager         https://www.linkedin.com/in/ACoAACl_Cg4BMmMq_3SCQncdNOrZrfsV045R91A
+98 Team Member  Monish Goutham        Brand Manager         https://www.linkedin.com/in/ACoAAC9UoCoBDdcQJuuLc_6WGn_4oPxg0z8sDZ8
+99 Team Member  Dhruv Goel            Developer             https://www.linkedin.com/in/dhruv1100
+100 Team Member Asjad Raza            Developer             https://www.linkedin.com/in/vedasjad
+102 Team Member UMIT VADGAMA         Design Team Member    https://www.linkedin.com/in/umitvadgama
+103 Team Member Sundharam            Developer             (no LinkedIn provided)
+104 Team Member Divyansh Gandotra    Developer             https://www.linkedin.com/in/divyansh-gandotra-625aa1276
+105 Team Member Ganesh S            Developer             https://www.linkedin.com/in/ganesh-s-34874924b
+106 Team Member Himani Srivastava   Developer             https://www.linkedin.com/in/himani-srivastava
+107 Team Member Utpal Tiwari        Developer             https://www.linkedin.com/in/utpal-tiwari-b6ab10203
+108 Team Member Sundaram Pandey     Developer             https://www.linkedin.com/in/sundaram-pandey-155043237
+109 Team Member Ahammed Habeebi     Design Team Member    https://www.linkedin.com/in/ahammed-habeebi-b4997021

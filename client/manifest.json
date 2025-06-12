@@ -1,0 +1,56 @@
+{
+  "name": "GAMERS TAG - Revolutionary Gaming Community Platform",
+  "short_name": "GAMERS TAG",
+  "description": "Join the world's first all-in-one gaming ecosystem. Connect with gamers worldwide, showcase your skills, find gaming opportunities, and build your professional gaming legacy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#E5042F",
+  "orientation": "portrait-primary",
+  "categories": ["games", "social", "entertainment"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gaming Profile",
+      "short_name": "Profile",
+      "description": "Create your professional gaming profile",
+      "url": "/features/pro-gaming-profile",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "GT Jobs",
+      "short_name": "Jobs",
+      "description": "Find gaming and esports job opportunities",
+      "url": "/features/gt-jobs",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Gaming News",
+      "short_name": "News",
+      "description": "Latest gaming and esports news",
+      "url": "/news",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr"
+}

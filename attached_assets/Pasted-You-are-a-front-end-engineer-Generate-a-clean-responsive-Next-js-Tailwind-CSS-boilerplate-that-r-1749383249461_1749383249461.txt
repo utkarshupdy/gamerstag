@@ -1,0 +1,65 @@
+You are a front-end engineer. Generate a clean, responsive Next.js + Tailwind CSS boilerplate that replicates the look and feel of https://sentinels.gg/, but enhanced with neumorphic and glassmorphic effects:
+
+1. **Color Palette & Theme**  
+   - Dark background: `#0D0F12`  
+   - Surface panels: `#1C1F26` (for solid surfaces)  
+   - Glassmorphic panels: semi-transparent `rgba(28, 31, 38, 0.6)` with backdrop blur  
+   - Primary accent (Sentinels red): `#E6002D`  
+   - Secondary accent (neon/glitch): `#00FFE0`  
+   - Text: white (`#FFFFFF`) and light gray (`#B0B3BA`)  
+
+2. **Typography**  
+   - Use “Montserrat” (or “Poppins”) from Google Fonts  
+   - Headings: bold, uppercase, tracking-wide  
+   - Body text: regular weight, medium line-height  
+
+3. **Layout & Components**  
+   - **Navbar**:  
+     - Sticky top; dark solid background with subtle neumorphic inset shadow  
+     - Logo left, menu links right  
+     - Hover state: link shifts up 2px and glows neon red  
+   - **Hero Section**:  
+     - Full-screen glassmorphic overlay (`backdrop-blur-lg`) on top of a muted video or gradient  
+     - Large uppercase headline with neon red text-shadow glow  
+     - Two CTA buttons:  
+       - Primary: solid red with soft neumorphic outer shadow  
+       - Secondary: transparent glassmorphic button with a red border and inset shadow  
+   - **Feature Grid**:  
+     - 3-column card layout  
+     - Each card is a neumorphic panel:  
+       - Background `#1C1F26`, border-radius `1rem`, dual shadows for a “pillowed” effect  
+       - On hover: glassmorphic highlight overlay and slight scale-up  
+       - Icon placeholder at top, then heading + text  
+   - **About / Info Section**:  
+     - Alternating image/text split in glassmorphic containers with blurred backdrop  
+     - Scroll-trigger fade+slide animations  
+   - **Footer**:  
+     - Dark neumorphic container with inset shadow  
+     - Social icons in white that glow neon on hover  
+
+4. **Styling Details & Animations**  
+   - **Tailwind Config**: extend theme colors/fonts, add custom utilities for:  
+     - `neumorphic` (e.g. `shadow-neu-light` & `shadow-neu-dark`)  
+     - `glassmorphic` (`backdrop-blur`, `bg-opacity`, `border`, `border-opacity`)  
+   - **Keyframes**:  
+     - “glitch” jitter on text hover  
+     - smooth “pop” on button press  
+   - **Transitions**: apply `transition-all duration-300 ease-in-out` everywhere interactive  
+
+5. **File Structure**  
+   - `/pages/index.js` for homepage  
+   - `/components/`:  
+     - `Navbar.js` (neumorphic bar)  
+     - `Hero.js` (glass-hero)  
+     - `FeatureCard.js` (neumorphic cards)  
+     - `GlassSection.js` (generic glassmorphic wrapper)  
+     - `Footer.js`  
+
+6. **Deliverables**  
+   - `tailwind.config.js` with custom colors, shadows, backdrops  
+   - `_app.js` importing global styles  
+   - All React components with placeholder content  
+
+---  
+
+Paste this prompt into your Replit AI assistant and let it generate the boilerplate. You’ll get a Sentinels-inspired, sharp, gamified, professional and modern site—now with neumorphic depth and glassmorphic sophistication.  

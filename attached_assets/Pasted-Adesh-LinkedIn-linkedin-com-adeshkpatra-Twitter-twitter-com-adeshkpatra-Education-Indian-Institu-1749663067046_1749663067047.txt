@@ -1,0 +1,219 @@
+Adesh
+LinkedIn: linkedin.com/adeshkpatra Twitter: twitter.com/adeshkpatra
+Education
+• Indian Institute of Technology, Guwahati (IIT Guwahati) Bachelor of Technology (B.Tech) Experience
+Assam, India
+Graduating May 2026
+Amazon Onsite, Bangalore
+•
+Software Development Intern — Java, ReactJS, Coral, Brazil, AWS May 2024 - July 2024
+◦ Integrated Field Price App with Amazon Kisan App (v6) to display daily market prices of different crops based on
+region which increased farmer awareness and improved weekly active users by 45%.
+◦ Build a web portal for vendor managers (v7) to address the intents of farmers to sell crops to Amazon via Kisan
+App which reduced manual efforts for vendors by 50% and increased farmer satisfaction scores by 30%.
+• Gamers Tag Remote
+Backend Developer-1 — Typescript, Neo4j, PostgreSQL, Redis, Websockets, Docker, AWS March 2024 - Present
+◦ Led the backend team in building scalable servers for a social-gaming app and mentored intern developers. Reduced
+complexity of core algorithms and performed API optimizations which improved response times by 20%.
+◦ Migrated the entire code-base from JS to TS and added features like custom tournament structures, crypto
+payments, reward points, news, job listings and few real-time mini-games which improved user engagement by 35%.
+Technical Skills
+C++, Java, Javascript, Typescript, Solidity, Solana, Ethereum, ReactJS, Recoil, NextJS, NodeJS, Springboot, MongoDB,
+PostgreSQL, Redis, Neo4j(GraphDB), ORM(Prisma, Sequelize), Docker, AWS, CI/CD, Hono, Cloudflare, Turborepo
+Programming Profile
+• Codeforces - 1565 (Specialist): codeforces.com/adeshkpatra - Solved more than 300 questions.
+• Leetcode - 1891 (Knight): leetcode.com/adesh - Among top 5% of entire leetcode community.
+• Codechef - 1723 (3 Star): codechef.com/theakp - Ranked 10 globally in Starters 126 Contest.
+Projects
+V-Share ReactJS, Recoil, Typescript, Tailwind CSS, Firebase
+•
+Github: github.com/adesh-k-patra/v-share Demo-Link: v-share-adeshkpatra.vercel.app
+◦ A workspace to share texts with each other in real-time. Users can type text and publish them for the rest of the world.
+◦ Users can create rooms and share the link of that room to other collaborators in which they all can work on text together.
+Texts will get updated in real-time for each of them just like Google Docs.
+• Decentralized File Storage System NextJS, Typescript, Tailwind CSS, NEAR SDK, IPFS, Mintbase
+Github: github.com/adesh-k-patra/web3-near-file-storage Demo-Video: drive.google.com/near-hackathon
+◦ A DApp on NEAR Blockchain where users can upload, download, share and delete files across the globe using IPFS.
+◦ Got 10th Rank globally via this project in Abstraction Hacks Hackathon conducted by NEAR Foundation - Twitter Post
+• Apex Store NextJS, Typescript, Tailwind CSS, Clerk, Stripe
+Github: github.com/adesh-k-patra/apex-store Demo-Link: apex-store.vercel.app
+◦ An E-Commerce App where users can browse all the products, add to cart and only after authenticating via email or google
+can proceed to the checkout process to make payment.
+◦ Users can search for desired products via various categories and sort their order of appearance on various parameters.
+Scholastic Achievements
+• AIR 2132 in JEE Advanced 2021 among 1.1M candidates • AIR 54 in KVPY conducted by IISC Bangalore • AIR 3 in
+NSEJS conducted by IAPT • Gold Medal from India in INJSO conducted by HBCSE • NTSE Scholar conducted by
+NCERT • 800/800 in SAT Physics • 800/800 in SAT Math Level 2 • AIR 9 in Technothlon conducted by IIT Guwahati
+Position Of Responsibility
+ALCHERINGA IIT Guwahati
+•
+Director Marketing, IITGMUN Jan 2022 - Dec 2023
+◦ Organized IITGMUN Edition XIV & XV, a Sponsored Annual Conference in Alcheringa - Largest Cultural Festival of
+North-East India, with participation of more than 250 delegates from all over India.
+TECHNICHE IIT Guwahati
+•
+Executive, PR & Branding Feb 2022 - July 2022
+◦ Organized Guwahati Half Marathon - Largest Student Organized Marathon of India, with participation of more than
+3000 marathoners from all over India.
+Relevant Courses
+• Data Structures and Algorithms • Blockchain Science and Technology • Probability and Random Processes • Linear Algebra
+* • Differential Equations • Complex Analysis • Computing Laboratory • Control and Robotics Laboratory   Adesh Kumar PatraAdesh Kumar Patra   • 2nd2nd  Director of Engineering / CTO at GAMERS TAG | Ex-SDE Intern at Amazon | B.Tech at IIT GuwahatiDirector of Engineering / CTO at GAMERS TAG | Ex-SDE Intern at Amazon | B.Tech at IIT Guwahati  10mo • Edited •  10 months ago • Edited • Visible to anyone on or off LinkedIn      I want to share that I have completed 2-month Summer Internship at Amazon as a Software Development Engineer (SDE) Intern.
+* 		
+* 		During my time there, I was part of Amazon Fresh team and I mainly focused on backend development. I not only learned Java and in-house tools from scratch but also applied this knowledge to contribute to 2 major app updates. Additionally, I gained extensive experience with various AWS services like DynamoDB, Lambda, Pipelines.
+* 		
+* 		I’m grateful to my team for their constant help and support. It was an amazing experience that has enriched my skills and professional growth.
+* 		
+* 		And a special shoutout to the wonderful Bangalore weather ✌️ …more   Activate to view larger image,  
+* ￼
+    *     Activate to view larger image,   
+    * ￼
+    * ￼
+    * ￼
+* 			▪	65 2 comments              Backend Languages & Frameworks
+* Python (Django, FastAPI, Flask)346
+* JavaScript/TypeScript (Node.js, Express.js, NestJS)1346
+* Java (Spring Boot)34
+* Go (Golang)1
+* Ruby (Ruby on Rails)4
+* PHP (Laravel)4
+* C# (.NET Core)1
+* Orchestration, Automation & DevOps
+* Kubernetes (container orchestration)278
+* Docker (containerization)28
+* n8n (workflow automation)
+* CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins)28
+* Infrastructure as Code (Terraform, Pulumi)
+* Monitoring & Logging (Prometheus, Grafana, ELK Stack)2
+* Cloud & Serverless
+* AWS, Azure, Google Cloud Platform (GCP)28
+* Serverless computing (AWS Lambda, Azure Functions, Google Cloud Functions)578
+* Edge computing57
+* Distributed cloud infrastructure5
+* Databases & Storage
+* SQL databases (PostgreSQL, MySQL)2
+* NoSQL databases (MongoDB, Redis, Cassandra)2
+* Vector databases (Pinecone, Milvus)5
+* Multi-model databases5
+* Serverless databases5
+* Web3 & Blockchain
+* Blockchain development (Ethereum, Solidity, Hyperledger)7
+* Decentralized storage (IPFS, Filecoin)
+* Smart contracts7
+* Web3 APIs & frameworks
+* APIs, Messaging & Integration
+* RESTful APIs & GraphQL2
+* gRPC
+* Message brokers (RabbitMQ, Kafka, NATS)2
+* Caching systems (Redis, Memcached)2
+* API gateways (Kong, Apigee)
+* Security & Authentication
+* OAuth2, JWT, SSO2
+* Zero Trust Architecture
+* Security best practices (encryption, XSS/CSRF/SQL injection protection)12
+* Other Key Areas
+* Microservices architecture78
+* Backend as a Service (BaaS: Firebase, Supabase)7
+* Low-code/no-code backend platforms7
+* AI/ML integration in backend (TensorFlow, PyTorch, OpenAI APIs)78
+* DevOps & SRE practices8
+* Version control (Git, GitHub, GitLab)2
+* Monitoring & Observability (Datadog, New Relic)28
+* Emerging & Specialized Technologies
+* AI-augmented backend development58
+* Event-driven architectures
+* Quantum computing integration (early-stage)
+*           
+* 		
+* ￼
+* 		   Adesh Kumar PatraAdesh Kumar Patra   • 2nd2nd  Director of Engineering / CTO at GAMERS TAG | Ex-SDE Intern at Amazon | B.Tech at IIT GuwahatiDirector of Engineering / CTO at GAMERS TAG | Ex-SDE Intern at Amazon | B.Tech at IIT Guwahati  2yr •  2 years ago • Visible to anyone on or off LinkedIn      
+* ￼
+* 		   IIT Guwahati Model United NationsIIT Guwahati Model United Nations  371 followers371 followers   The Constitution of India, implemented on 26th January 1949, resolved to constitute India as a Union of States and a sovereign, socialist, secular, democratic republic. Today, over a billion Indians practicing different religions and speaking different local languages coexist in harmony in the largest democracy. A population this diverse necessitates that laws of domestic relations should be in accordance with their faiths and appropriate to everyone.
+* 		
+* 		The IITG Model United Nations proudly presents the agenda for Lok Sabha, Redefining Family Laws: Dissecting the Matrimonial Laws in India. It emphasizes taboo subjects such as marital rape and same-sex marriage and concentrates on legal loopholes that deal with legal concerns that arise in families or other personal relationships.
+* 		
+* 		 Does custom override statutory family laws? Is a foreign divorce decree recognized by the Indian courts? Are civil partnerships legal in India? Can a single man have his own child through surrogacy? This February, answer all these questions as IITGMUN plans to analyze family laws and pass legislation to address their flaws.
+* 		
+* 		Applications will be out soon. Stay tuned!
+* 		Write to us at iitgmun@alcheringa.in
+* 		Follow us on Facebook, Instagram, and LinkedIn for further updates.
+* 		
+* 		hashtag #mun hashtag #IITGMUN hashtag #alcheringa2023 hashtag #UnitedNations hashtag #divorce hashtag #loksabha hashtag #lgbtq hashtag #marriage hashtag #maritalrape hashtag #abortion hashtag #adoption hashtag #surrogacy hashtag #Guwahati hashtag #ModelUnitedNations …more   Activate to view larger image,  
+* ￼
+* 		    Activate to view larger image,  with Alcheringa, IIT Guwahati                              
+* 		
+* 		
+* 		
+* 		
+* 		
+* 		
+* 		
+
+
+
+
+
+
+
+Show all posts
+
+Experience
+Experience
+* 		
+* ￼
+* 		   GAMERS TAG GAMERS TAG 1 yr 6 mos1 yr 6 mos  RemoteRemote 
+    * 		  Director of Engineering / CTO (Founding Member) Director of Engineering / CTO (Founding Member) Full-timeFull-time  Sep 2024 - Present · 10 mosSep 2024 to Present · 10 mos 
+            * 		Leading the entire tech division (25+ developers) across backend, frontend, and devOps—driving product innovation, scalability, and technical excellence.
+            * 		
+            * 		• Introduced crypto payment systems and developed a proprietary AdTech platform for campaign tracking and scalable monetization.
+            * 		• Built a modular SaaS-based Admin Panel with ERP, CRM, HRM, ATS, and PM capabilities, increasing operational efficiency and stakeholder productivity by 70%.
+            * 		• Developed AI agents to automate the scraping, polishing, and curation of job and news content from the web.
+            * 		• Optimized core algorithms and led real-time API integrations across distributed services, significantly improving system performance and responsiveness.Leading the entire tech division (25+ developers) across backend, frontend, and devOps—driving product innovation, scalability, and technical excellence. • Introduced crypto payment systems and developed a proprietary AdTech platform for campaign tracking and scalable monetization. • Built a modular SaaS-based Admin Panel with ERP, CRM, HRM, ATS, and PM capabilities, increasing operational efficiency and stakeholder productivity by 70%. • Developed AI agents to automate the scraping, polishing, and curation of job and news content from the web. • Optimized core algorithms and led real-time API integrations across distributed services, significantly improving system performance and responsiveness. …see more
+        * 		
+                * 		
+            * 		 Solana, Ethereum and +3 skills
+    * 		
+    * 		   Lead Backend Developer Lead Backend Developer Full-timeFull-time  Apr 2024 - Aug 2024 · 5 mosApr 2024 to Aug 2024 · 5 mos 
+            * 		Led a team of 15 developers, overseeing sprint planning, code reviews, and backend workflows.
+            * 		
+            * 		• Deployed and maintained backend services on AWS (EC2, S3, CloudWatch), ensuring high availability, auto-scaling, and performance monitoring.
+            * 		• Integrated payment gateways, stakeholder-specific dashboards, and analytics platforms to enhance functionality and user experience.Led a team of 15 developers, overseeing sprint planning, code reviews, and backend workflows. • Deployed and maintained backend services on AWS (EC2, S3, CloudWatch), ensuring high availability, auto-scaling, and performance monitoring. • Integrated payment gateways, stakeholder-specific dashboards, and analytics platforms to enhance functionality and user experience. …see more
+        * 		
+                * 		
+            * 		 WebSocket, Algorithms and +5 skills
+    * 		
+    * 		   Back-End Developer Intern Back-End Developer Intern InternshipInternship  Jan 2024 - Mar 2024 · 3 mosJan 2024 to Mar 2024 · 3 mos 
+            * 		Worked on the backend of GAMERS TAG, a social-gaming app enabling end-to-end tournament management along with core social media features, real-time mini-games, news, job listings, and rewards integration.
+            * 		
+            * 		• Revamped the codebase from JavaScript to TypeScript and migrated 70% of the PostgreSQL database to Neo4j, optimizing data relationships, algorithm efficiency, and API performance.Worked on the backend of GAMERS TAG, a social-gaming app enabling end-to-end tournament management along with core social media features, real-time mini-games, news, job listings, and rewards integration. • Revamped the codebase from JavaScript to TypeScript and migrated 70% of the PostgreSQL database to Neo4j, optimizing data relationships, algorithm efficiency, and API performance. …see more
+        * 		
+                * 		
+            * 		 Object-Oriented Programming (OOP), Postman and +10 skills
+    * 		
+* 		
+* 		 
+* ￼
+* 		   Software Development Engineer Intern Software Development Engineer Intern Amazon · InternshipAmazon · Internship  May 2024 - Jul 2024 · 3 mosMay 2024 to Jul 2024 · 3 mos  Bengaluru, Karnataka, India · On-siteBengaluru, Karnataka, India · On-site 
+        * 		Worked on both frontend and backend of the Amazon Kisan app under the Amazon Fresh team.
+        * 		
+        * 		• Integrated the Field Price app to display real-time crop prices by region, increasing farmer awareness and boosting weekly active users by 45%.
+        * 		• Built a vendor management web portal and corresponding APIs to process farmers' crop-selling intents, reducing manual vendor effort by 50% and increasing farmer satisfaction scores by 30%.
+        * 		• Implemented comprehensive 3xx/4xx/5xx error handling on the frontend, enhancing UX, failover logic, and API response clarity.Worked on both frontend and backend of the Amazon Kisan app under the Amazon Fresh team. • Integrated the Field Price app to display real-time crop prices by region, increasing farmer awareness and boosting weekly active users by 45%. • Built a vendor management web portal and corresponding APIs to process farmers' crop-selling intents, reducing manual vendor effort by 50% and increasing farmer satisfaction scores by 30%. • Implemented comprehensive 3xx/4xx/5xx error handling on the frontend, enhancing UX, failover logic, and API response clarity. …see more
+    * 		
+            * 		
+        * 		 Coral, TypeScript and +7 skills
+* 		
+* 		 
+* ￼
+* 		   IIT Guwahati Model United Nations IIT Guwahati Model United Nations Full-time · 1 yr 9 mosFull-time · 1 yr 9 mos  Guwahati, Assam, India · On-siteGuwahati, Assam, India · On-site 
+    * 		  Director Marketing Director Marketing Feb 2023 - Oct 2023 · 9 mosFeb 2023 to Oct 2023 · 9 mos    Executive Executive Feb 2022 - Feb 2023 · 1 yr 1 moFeb 2022 to Feb 2023 · 1 yr 1 mo 
+* 		 
+* ￼
+* 		   PR&Branding Executive PR&Branding Executive Techniche, IIT Guwahati · Full-timeTechniche, IIT Guwahati · Full-time  Jan 2022 - Jul 2022 · 7 mosJan 2022 to Jul 2022 · 7 mos  Guwahati, Assam, India · On-siteGuwahati, Assam, India · On-site 
+
+Education
+Education
+* 		
+* ￼
+* 		   Indian Institute of Technology, Guwahati Indian Institute of Technology, Guwahati Bachelor of Technology - BTech, Electrical and Electronics EngineeringBachelor of Technology - BTech, Electrical and Electronics Engineering 
+
+

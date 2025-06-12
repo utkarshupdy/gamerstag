@@ -1,0 +1,146 @@
+
+
+
+Harsh Singh
+LINKEDIN harsh-singh-639316291 
+EDUCATION
+Dr. APJ Abdul Kalam Technical University (AKTU) Bachelor of Technology in Computer Science and Engineering (CGPA of 8)
+EXPERIENCE
+2022-2026
+The Last Two Brain Cells July 2024 – September 2024
+Flutter Developer Intern
+• Designed and launched Gester for 1,000+ PG residents, transforming meal management, stay services, and
+personalized dining options
+• Optimized cross-device functionality of BLoC-driven apps, resulting in a significant reduction of load times by an
+average of 30%, ultimately elevating overall user satisfaction among app users.
+Seequenze Technologies April 2024 – July 2024
+Java and Flutter Intern
+• Developed PlatUI, a Figma-to-Flutter plugin, boosting productivity by 70% for 1,000+ developers.
+• Architected a high-performance Java backend, improving Figma-to-Flutter conversion eﬃciency by 40%.
+• Enhanced code quality, reducing bugs by 30% through comprehensive unit and integration testing.
+• Streamlined deployment using Docker, Jenkins, GitHub Actions, cutting deployment times by 50%.  ExperienceExperience
+GAMERS TAG logo
+GAMERS TAG
+GAMERS TAG
+Internship · 7 mosInternship · 7 mos
+Lead flutter developer 
+Lead flutter developer 
+Feb 2025 - Present · 5 mosFeb 2025 to Present · 5 mos
+Level 1 flutter developer 
+Level 1 flutter developer 
+Feb 2025 - Feb 2025 · 1 moFeb 2025 to Feb 2025 · 1 mo
+Junior Flutter Developer
+Junior Flutter Developer
+Dec 2024 - Feb 2025 · 3 mosDec 2024 to Feb 2025 · 3 mos
+RemoteRemote
+UX52 logo
+Flutter Developer and Devops Engineer
+Flutter Developer and Devops Engineer
+UX52 · InternshipUX52 · Internship
+Oct 2024 - Dec 2024 · 3 mosOct 2024 to Dec 2024 · 3 mos
+RemoteRemote
+Flutter, CI/CD and +2 skills
+L2BC logo
+Flutter Developer 
+Flutter Developer 
+L2BC · InternshipL2BC · Internship
+Jul 2024 - Oct 2024 · 4 mosJul 2024 to Oct 2024 · 4 mos
+Cloud Computing Cell AKGEC logo
+App Developer
+App Developer
+Cloud Computing Cell AKGEC · Full-timeCloud Computing Cell AKGEC · Full-time
+Dec 2023 - Oct 2024 · 11 mosDec 2023 to Oct 2024 · 11 mos
+On-siteOn-site
+Seequenze Technologies logo
+Flutter Developer Springboot developer 
+Flutter Developer Springboot developer 
+Seequenze Technologies · InternshipSeequenze Technologies · Internship
+Apr 2024 - Jul 2024 · 4 mos
+PROJECTS
+MBooking GitHub
+• Enhanced movie-going experience with our innovative app, powered by Firebase for reliability.
+• Streamlined booking and secure payments, achieving a 30% faster transaction rate.
+• Improved user experience by integrating multiple payment gateways, increasing payment success by 25%.
+Movie Data Backend GitHub
+• Engineered a high-performance Spring Boot API, enabling seamless movie ticket booking.
+• Optimized data handling and CRUD operations with JPA/Hibernate for secure user experience.
+• Implemented robust Spring Security, safeguarding sensitive user data and enhancing platform reliability.
+• Facilitated intuitive movie searching and ticket booking, elevating the overall user experience.
+Eduverse GitHub
+• Revolutionized online learning with an LMS featuring live video, increasing user engagement by 40%.
+• Leveraged advanced APIs to enhance user experience, reducing content load times by 30%.
+• Featured real-time analytics to track user engagement, improving course oﬀerings by 25%.
+• Integrated gamification features, boosting learner motivation and retention rates by 35%.
+SKILLS
+• Languages: Java, C++, Python, C, Dart
+• Additonal Skills:Flutter, SpringBoot, Spring, JPA, JDBC, XML, Spring Security, Spring Rest, Git/Github, CI/CD,
+PostMan, Figma, Jenkins, AWS, Google Cloud, Canva, Figma, Visual Studio, Intellij Idea, Android Studio, Collab  Mobile & Frontend Development
+* Flutter (cross-platform mobile app development)
+* Dart (Flutter’s primary language)
+* Figma (UI/UX prototyping and design integration)
+* XML (UI layout for Android)
+Backend & API Development
+* Java (core backend language)
+* Spring Boot (Java backend framework)
+* Spring Security (backend security)
+* JPA/Hibernate (ORM for Java)
+* JDBC (Java database connectivity)
+* RESTful APIs (backend communication)
+* Python (general-purpose scripting and backend)
+* C++ and C (systems programming)
+DevOps & Automation
+* Docker (containerization)
+* Jenkins (CI/CD pipelines)
+* GitHub Actions (CI/CD automation)
+* CI/CD best practices
+* n8n (workflow automation)
+* Git/GitHub (version control and collaboration)
+Cloud & Infrastructure
+* AWS (Amazon Web Services)
+* Google Cloud Platform (GCP)
+* Cloud deployment and scaling
+* Kubernetes (container orchestration)
+* Serverless computing (e.g., AWS Lambda)
+Database & Storage
+* Firebase (real-time backend and authentication)
+* SQL databases (MySQL, PostgreSQL)
+* NoSQL databases (MongoDB)
+* Cloud storage solutions
+Web3 & Emerging Tech
+* Web3 APIs and frameworks (blockchain integration)
+* Smart contracts (Ethereum/Solidity basics)
+* Decentralized storage (IPFS, Filecoin)
+Testing & Quality Assurance
+* Unit and integration testing (JUnit, Mockito for Java)
+* Postman (API testing)
+* Automated testing frameworks
+Monitoring & Analytics
+* Real-time analytics integration
+* Application monitoring (Prometheus, Grafana)
+* Logging (ELK Stack)
+Other Tools & Platforms
+* Android Studio, IntelliJ IDEA, Visual Studio (IDEs)
+* Canva (design assets)
+* API gateways (Kong, Apigee)
+* Messaging systems (Kafka, RabbitMQ basics)
+* Microservices architecture
+* Low-code/no-code backend tools
+Soft Skills & Leadership
+* Technical presentations and workshops
+* Workflow optimization and team collaboration
+* Designing and deploying automated workflows for routine and complex business processes
+* Integrating multiple cloud and backend services for seamless data flow
+* Utilizing triggers, conditional logic, and custom code (JavaScript, Python) within automation pipelines
+* Streamlining CI/CD, deployment, and monitoring tasks through automation
+* Enhancing productivity and reducing manual effort across development, operations, and support functions
+
+ACHIEVEMENTS
+• Choosen from 750 teams at Industry Academia Conclave-2023, NIT Jamshedpur
+• Finalist in the Medecro AI Hackothon , showcasing skills in innovative problem-solving and collaboration in AI
+development.
+• Solved 400+ promblems across various Platform
+LEADERSHIPS SKILLS
+Cloud Computing Cell | AKGEC App developer/Backend Developer
+• Presented a session on Git and GitHub to 150+ students, enhancing their grasp of version control and
+collaborative workflows.
+• Strategically used new technologies, streamlining workflows and improving project performance by 30%.
